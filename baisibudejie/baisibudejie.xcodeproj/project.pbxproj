@@ -13,6 +13,15 @@
 		31AE8C691EA0DE0B0061AB6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AE8C671EA0DE0B0061AB6D /* LaunchScreen.storyboard */; };
 		31AE8C731EA0DF240061AB6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C721EA0DF240061AB6D /* ViewController.m */; };
 		31AE8C761EA0DF580061AB6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C751EA0DF580061AB6D /* AppDelegate.m */; };
+		31AE8C8D1EA0F45C0061AB6D /* STEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C8C1EA0F45C0061AB6D /* STEssenceViewController.m */; };
+		31AE8C901EA0F4750061AB6D /* STFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C8F1EA0F4750061AB6D /* STFriendTrendsViewController.m */; };
+		31AE8C931EA0F4830061AB6D /* STMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C921EA0F4830061AB6D /* STMeViewController.m */; };
+		31AE8C961EA0F4920061AB6D /* STNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C951EA0F4920061AB6D /* STNewViewController.m */; };
+		31AE8C9A1EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C991EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m */; };
+		31AE8C9D1EA0F5140061AB6D /* UIView+STExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C9C1EA0F5140061AB6D /* UIView+STExtension.m */; };
+		31AE8CA01EA0F65D0061AB6D /* STTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C9F1EA0F65D0061AB6D /* STTabBarController.m */; };
+		31AE8CA31EA0F6F10061AB6D /* STNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8CA21EA0F6F10061AB6D /* STNavigationController.m */; };
+		31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8CA51EA0F70A0061AB6D /* STTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,25 @@
 		31AE8C721EA0DF240061AB6D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		31AE8C741EA0DF580061AB6D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		31AE8C751EA0DF580061AB6D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		31AE8C8B1EA0F45C0061AB6D /* STEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEssenceViewController.h; sourceTree = "<group>"; };
+		31AE8C8C1EA0F45C0061AB6D /* STEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEssenceViewController.m; sourceTree = "<group>"; };
+		31AE8C8E1EA0F4750061AB6D /* STFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFriendTrendsViewController.h; sourceTree = "<group>"; };
+		31AE8C8F1EA0F4750061AB6D /* STFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFriendTrendsViewController.m; sourceTree = "<group>"; };
+		31AE8C911EA0F4830061AB6D /* STMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMeViewController.h; sourceTree = "<group>"; };
+		31AE8C921EA0F4830061AB6D /* STMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMeViewController.m; sourceTree = "<group>"; };
+		31AE8C941EA0F4920061AB6D /* STNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewViewController.h; sourceTree = "<group>"; };
+		31AE8C951EA0F4920061AB6D /* STNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewViewController.m; sourceTree = "<group>"; };
+		31AE8C971EA0F4A60061AB6D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		31AE8C981EA0F4F40061AB6D /* UIBarButtonItem+STExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+STExtension.h"; sourceTree = "<group>"; };
+		31AE8C991EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+STExtension.m"; sourceTree = "<group>"; };
+		31AE8C9B1EA0F5140061AB6D /* UIView+STExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+STExtension.h"; sourceTree = "<group>"; };
+		31AE8C9C1EA0F5140061AB6D /* UIView+STExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+STExtension.m"; sourceTree = "<group>"; };
+		31AE8C9E1EA0F65D0061AB6D /* STTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabBarController.h; sourceTree = "<group>"; };
+		31AE8C9F1EA0F65D0061AB6D /* STTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabBarController.m; sourceTree = "<group>"; };
+		31AE8CA11EA0F6F10061AB6D /* STNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNavigationController.h; sourceTree = "<group>"; };
+		31AE8CA21EA0F6F10061AB6D /* STNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNavigationController.m; sourceTree = "<group>"; };
+		31AE8CA41EA0F70A0061AB6D /* STTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabBar.h; sourceTree = "<group>"; };
+		31AE8CA51EA0F70A0061AB6D /* STTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +108,15 @@
 			isa = PBXGroup;
 			children = (
 				31AE8C771EA0E0120061AB6D /* Essence-精华 */,
+				31AE8C831EA0E0120061AB6D /* New-新帖 */,
 				31AE8C7B1EA0E0120061AB6D /* FriendTrends-关注 */,
 				31AE8C7F1EA0E0120061AB6D /* Me-我 */,
-				31AE8C831EA0E0120061AB6D /* New-新帖 */,
 				31AE8C871EA0E0120061AB6D /* Other-其他 */,
 				31AE8C741EA0DF580061AB6D /* AppDelegate.h */,
 				31AE8C751EA0DF580061AB6D /* AppDelegate.m */,
 				31AE8C711EA0DF240061AB6D /* ViewController.h */,
 				31AE8C721EA0DF240061AB6D /* ViewController.m */,
+				31AE8C971EA0F4A60061AB6D /* PrefixHeader.pch */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -105,6 +134,8 @@
 		31AE8C781EA0E0120061AB6D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				31AE8C8B1EA0F45C0061AB6D /* STEssenceViewController.h */,
+				31AE8C8C1EA0F45C0061AB6D /* STEssenceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,6 +167,8 @@
 		31AE8C7C1EA0E0120061AB6D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				31AE8C8E1EA0F4750061AB6D /* STFriendTrendsViewController.h */,
+				31AE8C8F1EA0F4750061AB6D /* STFriendTrendsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +200,8 @@
 		31AE8C801EA0E0120061AB6D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				31AE8C911EA0F4830061AB6D /* STMeViewController.h */,
+				31AE8C921EA0F4830061AB6D /* STMeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,6 +233,8 @@
 		31AE8C841EA0E0120061AB6D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				31AE8C941EA0F4920061AB6D /* STNewViewController.h */,
+				31AE8C951EA0F4920061AB6D /* STNewViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,6 +266,10 @@
 		31AE8C881EA0E0120061AB6D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				31AE8C981EA0F4F40061AB6D /* UIBarButtonItem+STExtension.h */,
+				31AE8C991EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m */,
+				31AE8C9B1EA0F5140061AB6D /* UIView+STExtension.h */,
+				31AE8C9C1EA0F5140061AB6D /* UIView+STExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -236,6 +277,10 @@
 		31AE8C891EA0E0120061AB6D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				31AE8C9E1EA0F65D0061AB6D /* STTabBarController.h */,
+				31AE8C9F1EA0F65D0061AB6D /* STTabBarController.m */,
+				31AE8CA11EA0F6F10061AB6D /* STNavigationController.h */,
+				31AE8CA21EA0F6F10061AB6D /* STNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +288,8 @@
 		31AE8C8A1EA0E0120061AB6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				31AE8CA41EA0F70A0061AB6D /* STTabBar.h */,
+				31AE8CA51EA0F70A0061AB6D /* STTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,9 +367,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31AE8CA01EA0F65D0061AB6D /* STTabBarController.m in Sources */,
+				31AE8C9D1EA0F5140061AB6D /* UIView+STExtension.m in Sources */,
+				31AE8CA31EA0F6F10061AB6D /* STNavigationController.m in Sources */,
+				31AE8C901EA0F4750061AB6D /* STFriendTrendsViewController.m in Sources */,
+				31AE8C8D1EA0F45C0061AB6D /* STEssenceViewController.m in Sources */,
+				31AE8C961EA0F4920061AB6D /* STNewViewController.m in Sources */,
 				31AE8C731EA0DF240061AB6D /* ViewController.m in Sources */,
 				31AE8C5B1EA0DE0B0061AB6D /* main.m in Sources */,
+				31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */,
+				31AE8C9A1EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m in Sources */,
 				31AE8C761EA0DF580061AB6D /* AppDelegate.m in Sources */,
+				31AE8C931EA0F4830061AB6D /* STMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 3V39Q7F96X;
+				GCC_PREFIX_HEADER = baisibudejie/Class/PrefixHeader.pch;
 				INFOPLIST_FILE = baisibudejie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -458,6 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 3V39Q7F96X;
+				GCC_PREFIX_HEADER = baisibudejie/Class/PrefixHeader.pch;
 				INFOPLIST_FILE = baisibudejie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
