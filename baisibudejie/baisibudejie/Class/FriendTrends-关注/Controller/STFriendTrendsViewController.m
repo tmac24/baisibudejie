@@ -7,6 +7,7 @@
 //
 
 #import "STFriendTrendsViewController.h"
+#import "STRecommendViewController.h"
 
 @interface STFriendTrendsViewController ()
 
@@ -29,7 +30,9 @@
 
 - (void)friendsClick
 {
-    STLogFunc;
+    STRecommendViewController *reVc = [[STRecommendViewController alloc] init];
+    
+    [self.navigationController pushViewController:reVc animated:YES];
 }
 
 @end

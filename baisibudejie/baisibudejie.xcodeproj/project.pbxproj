@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31915C021EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib */; };
+		31915C061EA4833400AE3BD6 /* STRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C051EA4833400AE3BD6 /* STRecommendViewController.m */; };
+		31915C081EA4887800AE3BD6 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C071EA4887800AE3BD6 /* Foundation+Log.m */; };
 		31AE8C5B1EA0DE0B0061AB6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C5A1EA0DE0B0061AB6D /* main.m */; };
 		31AE8C641EA0DE0B0061AB6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AE8C621EA0DE0B0061AB6D /* Main.storyboard */; };
 		31AE8C661EA0DE0B0061AB6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31AE8C651EA0DE0B0061AB6D /* Assets.xcassets */; };
@@ -22,10 +24,15 @@
 		31AE8CA01EA0F65D0061AB6D /* STTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C9F1EA0F65D0061AB6D /* STTabBarController.m */; };
 		31AE8CA31EA0F6F10061AB6D /* STNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8CA21EA0F6F10061AB6D /* STNavigationController.m */; };
 		31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8CA51EA0F70A0061AB6D /* STTabBar.m */; };
+		ED66016E5001C05DEE2B9D83 /* libPods-baisibudejie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D783374E6D81954FB95680 /* libPods-baisibudejie.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BF02E12A0B833A91BC32730 /* Pods-baisibudejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baisibudejie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-baisibudejie/Pods-baisibudejie.debug.xcconfig"; sourceTree = "<group>"; };
 		31915C021EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		31915C041EA4833400AE3BD6 /* STRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRecommendViewController.h; sourceTree = "<group>"; };
+		31915C051EA4833400AE3BD6 /* STRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRecommendViewController.m; sourceTree = "<group>"; };
+		31915C071EA4887800AE3BD6 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		31AE8C561EA0DE0B0061AB6D /* baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AE8C5A1EA0DE0B0061AB6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		31AE8C631EA0DE0B0061AB6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +60,8 @@
 		31AE8CA21EA0F6F10061AB6D /* STNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNavigationController.m; sourceTree = "<group>"; };
 		31AE8CA41EA0F70A0061AB6D /* STTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabBar.h; sourceTree = "<group>"; };
 		31AE8CA51EA0F70A0061AB6D /* STTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabBar.m; sourceTree = "<group>"; };
+		51B5B1AA0B2AD2C166AD9D76 /* Pods-baisibudejie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baisibudejie.release.xcconfig"; path = "Pods/Target Support Files/Pods-baisibudejie/Pods-baisibudejie.release.xcconfig"; sourceTree = "<group>"; };
+		A0D783374E6D81954FB95680 /* libPods-baisibudejie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-baisibudejie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +69,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED66016E5001C05DEE2B9D83 /* libPods-baisibudejie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03EA87F22A29B6461A121840 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0D783374E6D81954FB95680 /* libPods-baisibudejie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		31AE8C4D1EA0DE0B0061AB6D = {
 			isa = PBXGroup;
 			children = (
 				31AE8C581EA0DE0B0061AB6D /* baisibudejie */,
 				31AE8C571EA0DE0B0061AB6D /* Products */,
+				F527C2FE2626B700A5FD261A /* Pods */,
+				03EA87F22A29B6461A121840 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +134,7 @@
 				31AE8C741EA0DF580061AB6D /* AppDelegate.h */,
 				31AE8C751EA0DF580061AB6D /* AppDelegate.m */,
 				31AE8C971EA0F4A60061AB6D /* PrefixHeader.pch */,
+				31915C071EA4887800AE3BD6 /* Foundation+Log.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -167,6 +188,8 @@
 				31AE8C8E1EA0F4750061AB6D /* STFriendTrendsViewController.h */,
 				31AE8C8F1EA0F4750061AB6D /* STFriendTrendsViewController.m */,
 				31915C021EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib */,
+				31915C041EA4833400AE3BD6 /* STRecommendViewController.h */,
+				31915C051EA4833400AE3BD6 /* STRecommendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,6 +315,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F527C2FE2626B700A5FD261A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BF02E12A0B833A91BC32730 /* Pods-baisibudejie.debug.xcconfig */,
+				51B5B1AA0B2AD2C166AD9D76 /* Pods-baisibudejie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,9 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31AE8C6D1EA0DE0B0061AB6D /* Build configuration list for PBXNativeTarget "baisibudejie" */;
 			buildPhases = (
+				F846A7D4C5DBB7329205B8B7 /* [CP] Check Pods Manifest.lock */,
 				31AE8C521EA0DE0B0061AB6D /* Sources */,
 				31AE8C531EA0DE0B0061AB6D /* Frameworks */,
 				31AE8C541EA0DE0B0061AB6D /* Resources */,
+				7EFD9F2D8EEF8B1DD6912D4E /* [CP] Embed Pods Frameworks */,
+				997414D1598464D475812367 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,6 +396,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7EFD9F2D8EEF8B1DD6912D4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-baisibudejie/Pods-baisibudejie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		997414D1598464D475812367 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-baisibudejie/Pods-baisibudejie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F846A7D4C5DBB7329205B8B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		31AE8C521EA0DE0B0061AB6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -376,6 +459,8 @@
 				31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */,
 				31AE8C9A1EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m in Sources */,
 				31AE8C761EA0DF580061AB6D /* AppDelegate.m in Sources */,
+				31915C081EA4887800AE3BD6 /* Foundation+Log.m in Sources */,
+				31915C061EA4833400AE3BD6 /* STRecommendViewController.m in Sources */,
 				31AE8C931EA0F4830061AB6D /* STMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +579,7 @@
 		};
 		31AE8C6E1EA0DE0B0061AB6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BF02E12A0B833A91BC32730 /* Pods-baisibudejie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -509,6 +595,7 @@
 		};
 		31AE8C6F1EA0DE0B0061AB6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B5B1AA0B2AD2C166AD9D76 /* Pods-baisibudejie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
