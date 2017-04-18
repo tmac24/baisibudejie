@@ -10,6 +10,13 @@
 		31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31915C021EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib */; };
 		31915C061EA4833400AE3BD6 /* STRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C051EA4833400AE3BD6 /* STRecommendViewController.m */; };
 		31915C081EA4887800AE3BD6 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C071EA4887800AE3BD6 /* Foundation+Log.m */; };
+		31915C0A1EA4DB6A00AE3BD6 /* STRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31915C091EA4DB6A00AE3BD6 /* STRecommendViewController.xib */; };
+		31915C0D1EA4DC2800AE3BD6 /* STRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C0C1EA4DC2800AE3BD6 /* STRecommendCategory.m */; };
+		31915C111EA4DC5600AE3BD6 /* STRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C0F1EA4DC5600AE3BD6 /* STRecommendCategoryCell.m */; };
+		31915C121EA4DC5600AE3BD6 /* STRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31915C101EA4DC5600AE3BD6 /* STRecommendCategoryCell.xib */; };
+		31915C151EA597F300AE3BD6 /* STRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C141EA597F300AE3BD6 /* STRecommendUser.m */; };
+		31915C1E1EA5986E00AE3BD6 /* STRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C1C1EA5986E00AE3BD6 /* STRecommendUserCell.m */; };
+		31915C1F1EA5986E00AE3BD6 /* STRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31915C1D1EA5986E00AE3BD6 /* STRecommendUserCell.xib */; };
 		31AE8C5B1EA0DE0B0061AB6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C5A1EA0DE0B0061AB6D /* main.m */; };
 		31AE8C641EA0DE0B0061AB6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AE8C621EA0DE0B0061AB6D /* Main.storyboard */; };
 		31AE8C661EA0DE0B0061AB6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31AE8C651EA0DE0B0061AB6D /* Assets.xcassets */; };
@@ -33,6 +40,17 @@
 		31915C041EA4833400AE3BD6 /* STRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRecommendViewController.h; sourceTree = "<group>"; };
 		31915C051EA4833400AE3BD6 /* STRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRecommendViewController.m; sourceTree = "<group>"; };
 		31915C071EA4887800AE3BD6 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		31915C091EA4DB6A00AE3BD6 /* STRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STRecommendViewController.xib; sourceTree = "<group>"; };
+		31915C0B1EA4DC2800AE3BD6 /* STRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRecommendCategory.h; sourceTree = "<group>"; };
+		31915C0C1EA4DC2800AE3BD6 /* STRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRecommendCategory.m; sourceTree = "<group>"; };
+		31915C0E1EA4DC5600AE3BD6 /* STRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRecommendCategoryCell.h; sourceTree = "<group>"; };
+		31915C0F1EA4DC5600AE3BD6 /* STRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRecommendCategoryCell.m; sourceTree = "<group>"; };
+		31915C101EA4DC5600AE3BD6 /* STRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		31915C131EA597F300AE3BD6 /* STRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRecommendUser.h; sourceTree = "<group>"; };
+		31915C141EA597F300AE3BD6 /* STRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRecommendUser.m; sourceTree = "<group>"; };
+		31915C1B1EA5986E00AE3BD6 /* STRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRecommendUserCell.h; sourceTree = "<group>"; };
+		31915C1C1EA5986E00AE3BD6 /* STRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRecommendUserCell.m; sourceTree = "<group>"; };
+		31915C1D1EA5986E00AE3BD6 /* STRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STRecommendUserCell.xib; sourceTree = "<group>"; };
 		31AE8C561EA0DE0B0061AB6D /* baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AE8C5A1EA0DE0B0061AB6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		31AE8C631EA0DE0B0061AB6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -190,6 +208,7 @@
 				31915C021EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib */,
 				31915C041EA4833400AE3BD6 /* STRecommendViewController.h */,
 				31915C051EA4833400AE3BD6 /* STRecommendViewController.m */,
+				31915C091EA4DB6A00AE3BD6 /* STRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +216,10 @@
 		31AE8C7D1EA0E0120061AB6D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31915C0B1EA4DC2800AE3BD6 /* STRecommendCategory.h */,
+				31915C0C1EA4DC2800AE3BD6 /* STRecommendCategory.m */,
+				31915C131EA597F300AE3BD6 /* STRecommendUser.h */,
+				31915C141EA597F300AE3BD6 /* STRecommendUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +227,12 @@
 		31AE8C7E1EA0E0120061AB6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				31915C0E1EA4DC5600AE3BD6 /* STRecommendCategoryCell.h */,
+				31915C0F1EA4DC5600AE3BD6 /* STRecommendCategoryCell.m */,
+				31915C101EA4DC5600AE3BD6 /* STRecommendCategoryCell.xib */,
+				31915C1B1EA5986E00AE3BD6 /* STRecommendUserCell.h */,
+				31915C1C1EA5986E00AE3BD6 /* STRecommendUserCell.m */,
+				31915C1D1EA5986E00AE3BD6 /* STRecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -387,8 +416,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31915C1F1EA5986E00AE3BD6 /* STRecommendUserCell.xib in Resources */,
+				31915C0A1EA4DB6A00AE3BD6 /* STRecommendViewController.xib in Resources */,
 				31AE8C691EA0DE0B0061AB6D /* LaunchScreen.storyboard in Resources */,
 				31AE8C661EA0DE0B0061AB6D /* Assets.xcassets in Resources */,
+				31915C121EA4DC5600AE3BD6 /* STRecommendCategoryCell.xib in Resources */,
 				31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */,
 				31AE8C641EA0DE0B0061AB6D /* Main.storyboard in Resources */,
 			);
@@ -454,11 +486,15 @@
 				31AE8CA31EA0F6F10061AB6D /* STNavigationController.m in Sources */,
 				31AE8C901EA0F4750061AB6D /* STFriendTrendsViewController.m in Sources */,
 				31AE8C8D1EA0F45C0061AB6D /* STEssenceViewController.m in Sources */,
+				31915C111EA4DC5600AE3BD6 /* STRecommendCategoryCell.m in Sources */,
 				31AE8C961EA0F4920061AB6D /* STNewViewController.m in Sources */,
+				31915C1E1EA5986E00AE3BD6 /* STRecommendUserCell.m in Sources */,
 				31AE8C5B1EA0DE0B0061AB6D /* main.m in Sources */,
+				31915C0D1EA4DC2800AE3BD6 /* STRecommendCategory.m in Sources */,
 				31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */,
 				31AE8C9A1EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m in Sources */,
 				31AE8C761EA0DF580061AB6D /* AppDelegate.m in Sources */,
+				31915C151EA597F300AE3BD6 /* STRecommendUser.m in Sources */,
 				31915C081EA4887800AE3BD6 /* Foundation+Log.m in Sources */,
 				31915C061EA4833400AE3BD6 /* STRecommendViewController.m in Sources */,
 				31AE8C931EA0F4830061AB6D /* STMeViewController.m in Sources */,
