@@ -7,6 +7,7 @@
 //
 
 #import "STEssenceViewController.h"
+#import "STRecommendTagsViewController.h"
 
 @interface STEssenceViewController ()
 
@@ -30,6 +31,7 @@
 
 - (void)tagClick
 {
-    STLogFunc;
+    STRecommendTagsViewController *vc = [[STRecommendTagsViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

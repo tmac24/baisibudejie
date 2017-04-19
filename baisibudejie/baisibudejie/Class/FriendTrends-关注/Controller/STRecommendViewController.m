@@ -117,26 +117,33 @@ static NSString * const STUserId = @"user";
 
     STRecommendCategory *c = self.categories[indexPath.row];
     
-    //发送给服务器，加载右边的数据
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(c.id);
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        // 字典数组 -> 模型数组
-        NSArray *users= [STRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
-        // 添加到当前类别对应的用户数组中
-        [c.users addObjectsFromArray:users];
-        
-        //刷新右边表格
+    if (c.users.count) {
+        //显示曾经的数据
         [self.userTableView reloadData];
+    }else{
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        STLog(@"%@",error);
-    }];
+        //发送给服务器，加载右边的数据
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        params[@"a"] = @"list";
+        params[@"c"] = @"subscribe";
+        params[@"category_id"] = @(c.id);
+        [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            // 字典数组 -> 模型数组
+            NSArray *users= [STRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            
+            // 添加到当前类别对应的用户数组中
+            [c.users addObjectsFromArray:users];
+            
+            //刷新右边表格
+            [self.userTableView reloadData];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            STLog(@"%@",error);
+        }];   
+    }
 }
 
 /**
