@@ -8,6 +8,7 @@
 
 #import "STFriendTrendsViewController.h"
 #import "STRecommendViewController.h"
+#import "STLoginRegisterViewController.h"
 
 @interface STFriendTrendsViewController ()
 
@@ -33,6 +34,12 @@
     STRecommendViewController *reVc = [[STRecommendViewController alloc] init];
     
     [self.navigationController pushViewController:reVc animated:YES];
+}
+
+- (IBAction)loginClick:(id)sender {
+    
+    STLoginRegisterViewController *lg = [[STLoginRegisterViewController alloc] init];
+    [self presentViewController:lg animated:YES completion:nil];
 }
 
 @end

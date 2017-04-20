@@ -35,6 +35,9 @@
 		31DE2A891EA70ED2009441F1 /* STRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE2A881EA70ED2009441F1 /* STRecommendTag.m */; };
 		31DE2A8D1EA70EF2009441F1 /* STRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE2A8B1EA70EF2009441F1 /* STRecommendTagCell.m */; };
 		31DE2A8E1EA70EF2009441F1 /* STRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31DE2A8C1EA70EF2009441F1 /* STRecommendTagCell.xib */; };
+		31DE2A921EA73AD8009441F1 /* STLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE2A901EA73AD8009441F1 /* STLoginRegisterViewController.m */; };
+		31DE2A951EA8486F009441F1 /* STLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31DE2A941EA8486F009441F1 /* STLoginRegisterViewController.xib */; };
+		31DE2A981EA85382009441F1 /* STVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE2A971EA85382009441F1 /* STVerticalButton.m */; };
 		ED66016E5001C05DEE2B9D83 /* libPods-baisibudejie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D783374E6D81954FB95680 /* libPods-baisibudejie.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +92,11 @@
 		31DE2A8A1EA70EF2009441F1 /* STRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRecommendTagCell.h; sourceTree = "<group>"; };
 		31DE2A8B1EA70EF2009441F1 /* STRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRecommendTagCell.m; sourceTree = "<group>"; };
 		31DE2A8C1EA70EF2009441F1 /* STRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STRecommendTagCell.xib; sourceTree = "<group>"; };
+		31DE2A8F1EA73AD8009441F1 /* STLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLoginRegisterViewController.h; sourceTree = "<group>"; };
+		31DE2A901EA73AD8009441F1 /* STLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoginRegisterViewController.m; sourceTree = "<group>"; };
+		31DE2A941EA8486F009441F1 /* STLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		31DE2A961EA85382009441F1 /* STVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVerticalButton.h; sourceTree = "<group>"; };
+		31DE2A971EA85382009441F1 /* STVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVerticalButton.m; sourceTree = "<group>"; };
 		51B5B1AA0B2AD2C166AD9D76 /* Pods-baisibudejie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baisibudejie.release.xcconfig"; path = "Pods/Target Support Files/Pods-baisibudejie/Pods-baisibudejie.release.xcconfig"; sourceTree = "<group>"; };
 		A0D783374E6D81954FB95680 /* libPods-baisibudejie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-baisibudejie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -227,6 +235,9 @@
 				31915C041EA4833400AE3BD6 /* STRecommendViewController.h */,
 				31915C051EA4833400AE3BD6 /* STRecommendViewController.m */,
 				31915C091EA4DB6A00AE3BD6 /* STRecommendViewController.xib */,
+				31DE2A8F1EA73AD8009441F1 /* STLoginRegisterViewController.h */,
+				31DE2A901EA73AD8009441F1 /* STLoginRegisterViewController.m */,
+				31DE2A941EA8486F009441F1 /* STLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,6 +262,8 @@
 				31915C1B1EA5986E00AE3BD6 /* STRecommendUserCell.h */,
 				31915C1C1EA5986E00AE3BD6 /* STRecommendUserCell.m */,
 				31915C1D1EA5986E00AE3BD6 /* STRecommendUserCell.xib */,
+				31DE2A961EA85382009441F1 /* STVerticalButton.h */,
+				31DE2A971EA85382009441F1 /* STVerticalButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,6 +453,7 @@
 				31AE8C661EA0DE0B0061AB6D /* Assets.xcassets in Resources */,
 				31DE2A8E1EA70EF2009441F1 /* STRecommendTagCell.xib in Resources */,
 				31915C121EA4DC5600AE3BD6 /* STRecommendCategoryCell.xib in Resources */,
+				31DE2A951EA8486F009441F1 /* STLoginRegisterViewController.xib in Resources */,
 				31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */,
 				31AE8C641EA0DE0B0061AB6D /* Main.storyboard in Resources */,
 			);
@@ -511,10 +525,12 @@
 				31AE8C961EA0F4920061AB6D /* STNewViewController.m in Sources */,
 				31915C1E1EA5986E00AE3BD6 /* STRecommendUserCell.m in Sources */,
 				31AE8C5B1EA0DE0B0061AB6D /* main.m in Sources */,
+				31DE2A921EA73AD8009441F1 /* STLoginRegisterViewController.m in Sources */,
 				31DE2A861EA70EB5009441F1 /* STRecommendTagsViewController.m in Sources */,
 				31915C0D1EA4DC2800AE3BD6 /* STRecommendCategory.m in Sources */,
 				31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */,
 				31AE8C9A1EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m in Sources */,
+				31DE2A981EA85382009441F1 /* STVerticalButton.m in Sources */,
 				31AE8C761EA0DF580061AB6D /* AppDelegate.m in Sources */,
 				31915C151EA597F300AE3BD6 /* STRecommendUser.m in Sources */,
 				31915C081EA4887800AE3BD6 /* Foundation+Log.m in Sources */,
