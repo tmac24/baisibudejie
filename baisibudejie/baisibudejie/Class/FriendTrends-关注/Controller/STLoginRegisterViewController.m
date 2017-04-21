@@ -9,10 +9,34 @@
 #import "STLoginRegisterViewController.h"
 
 @interface STLoginRegisterViewController ()
+@property (weak, nonatomic) IBOutlet UIView *loginView;
 
 @end
 
 @implementation STLoginRegisterViewController
+- (IBAction)closeClick:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)showLoginOrRegister:(UIButton *)sender {
+    
+//    // 退出键盘
+//    [self.view endEditing:YES];
+//    
+//    if (self.loginViewLeftMargin.constant == 0) { // 显示注册界面
+//        self.loginViewLeftMargin.constant = - self.view.width;
+//        button.selected = YES;
+//        //        [button setTitle:@"已有账号?" forState:UIControlStateNormal];
+//    } else { // 显示登录界面
+//        self.loginViewLeftMargin.constant = 0;
+//        button.selected = NO;
+//        //        [button setTitle:@"注册账号" forState:UIControlStateNormal];
+//    }
+//    
+//    [UIView animateWithDuration:0.25 animations:^{
+//        [self.view layoutIfNeeded];
+//    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

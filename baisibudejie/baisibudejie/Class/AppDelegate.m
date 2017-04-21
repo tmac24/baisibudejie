@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "STTabBarController.h"
+#import "STPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,10 @@
     
     // 显示窗口
     [self.window makeKeyAndVisible];
+    
+    //显示推送引导
+    [STPushGuideView show];
+    
     return YES;
 }
 

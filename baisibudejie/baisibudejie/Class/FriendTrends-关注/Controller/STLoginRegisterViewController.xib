@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STLoginRegisterViewController">
             <connections>
+                <outlet property="loginView" destination="Ibw-ZO-8Na" id="PFf-45-kpk"/>
                 <outlet property="view" destination="lc2-aD-azJ" id="0tg-6V-i6p"/>
             </connections>
         </placeholder>
@@ -82,6 +83,9 @@
                         <constraint firstAttribute="width" constant="30" id="n29-yu-B19"/>
                     </constraints>
                     <state key="normal" image="login_close_icon"/>
+                    <connections>
+                        <action selector="closeClick:" destination="-1" eventType="touchUpInside" id="SRH-Y6-QmF"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibw-ZO-8Na">
                     <rect key="frame" x="0.0" y="65" width="375" height="250"/>
@@ -92,17 +96,17 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_rgister_textfield_bg" translatesAutoresizingMaskIntoConstraints="NO" id="hfN-Hs-GGz">
                                     <rect key="frame" x="0.0" y="0.0" width="246" height="102"/>
                                 </imageView>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCx-E4-QfM">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NCx-E4-QfM">
                                     <rect key="frame" x="10" y="0.0" width="226" height="51"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpF-aJ-CFO">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MpF-aJ-CFO">
                                     <rect key="frame" x="10" y="51" width="226" height="51"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -160,6 +164,16 @@
                         <constraint firstAttribute="height" constant="250" id="vh6-Kw-twG"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOi-XR-HWv">
+                    <rect key="frame" x="283" y="25" width="62" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="注册账号">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showLoginOrRegister:" destination="-1" eventType="touchUpInside" id="so1-BF-Z3k"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -170,10 +184,12 @@
                 <constraint firstItem="Ibw-ZO-8Na" firstAttribute="top" secondItem="6Rs-SY-Yeg" secondAttribute="bottom" constant="10" id="aH1-qD-HDm"/>
                 <constraint firstAttribute="bottom" secondItem="D4e-xu-YEj" secondAttribute="bottom" id="cMN-HW-2j0"/>
                 <constraint firstItem="7KH-nV-vJM" firstAttribute="leading" secondItem="lc2-aD-azJ" secondAttribute="leading" id="fCU-OF-ugK"/>
+                <constraint firstItem="KOi-XR-HWv" firstAttribute="top" secondItem="lc2-aD-azJ" secondAttribute="top" constant="25" id="fim-zm-G7k"/>
                 <constraint firstItem="D4e-xu-YEj" firstAttribute="leading" secondItem="lc2-aD-azJ" secondAttribute="leading" id="gEM-Kv-F8c"/>
                 <constraint firstItem="Ibw-ZO-8Na" firstAttribute="leading" secondItem="lc2-aD-azJ" secondAttribute="leading" id="kYo-hd-uW3"/>
                 <constraint firstAttribute="trailing" secondItem="7KH-nV-vJM" secondAttribute="trailing" id="nLQ-y1-Gdk"/>
                 <constraint firstItem="7KH-nV-vJM" firstAttribute="top" secondItem="lc2-aD-azJ" secondAttribute="top" id="qQF-lR-qWK"/>
+                <constraint firstAttribute="trailing" secondItem="KOi-XR-HWv" secondAttribute="trailing" constant="30" id="tST-ji-wFY"/>
                 <constraint firstAttribute="trailing" secondItem="Ibw-ZO-8Na" secondAttribute="trailing" id="wFD-QZ-ZH0"/>
             </constraints>
             <point key="canvasLocation" x="22.5" y="-3.5"/>
