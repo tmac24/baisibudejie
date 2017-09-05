@@ -46,6 +46,8 @@
 		31DE2AAB1EACD1BC009441F1 /* STVoiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE2AAA1EACD1BC009441F1 /* STVoiceTableViewController.m */; };
 		31DE2AAE1EACD1D1009441F1 /* STPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE2AAD1EACD1D1009441F1 /* STPictureViewController.m */; };
 		31DE2AB11EACD1E1009441F1 /* STWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE2AB01EACD1E1009441F1 /* STWordViewController.m */; };
+		31DE2AB41EACEFFD009441F1 /* STTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE2AB31EACEFFD009441F1 /* STTopic.m */; };
+		31DE2AB71EAD873E009441F1 /* STConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE2AB61EAD873E009441F1 /* STConst.m */; };
 		ED66016E5001C05DEE2B9D83 /* libPods-baisibudejie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D783374E6D81954FB95680 /* libPods-baisibudejie.a */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +122,10 @@
 		31DE2AAD1EACD1D1009441F1 /* STPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPictureViewController.m; sourceTree = "<group>"; };
 		31DE2AAF1EACD1E1009441F1 /* STWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWordViewController.h; sourceTree = "<group>"; };
 		31DE2AB01EACD1E1009441F1 /* STWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWordViewController.m; sourceTree = "<group>"; };
+		31DE2AB21EACEFFD009441F1 /* STTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTopic.h; sourceTree = "<group>"; };
+		31DE2AB31EACEFFD009441F1 /* STTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTopic.m; sourceTree = "<group>"; };
+		31DE2AB51EAD873E009441F1 /* STConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConst.h; sourceTree = "<group>"; };
+		31DE2AB61EAD873E009441F1 /* STConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConst.m; sourceTree = "<group>"; };
 		51B5B1AA0B2AD2C166AD9D76 /* Pods-baisibudejie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baisibudejie.release.xcconfig"; path = "Pods/Target Support Files/Pods-baisibudejie/Pods-baisibudejie.release.xcconfig"; sourceTree = "<group>"; };
 		A0D783374E6D81954FB95680 /* libPods-baisibudejie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-baisibudejie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -231,6 +237,8 @@
 			children = (
 				31DE2A871EA70ED2009441F1 /* STRecommendTag.h */,
 				31DE2A881EA70ED2009441F1 /* STRecommendTag.m */,
+				31DE2AB21EACEFFD009441F1 /* STTopic.h */,
+				31DE2AB31EACEFFD009441F1 /* STTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -372,6 +380,8 @@
 				31AE8C751EA0DF580061AB6D /* AppDelegate.m */,
 				31AE8C971EA0F4A60061AB6D /* PrefixHeader.pch */,
 				31915C071EA4887800AE3BD6 /* Foundation+Log.m */,
+				31DE2AB51EAD873E009441F1 /* STConst.h */,
+				31DE2AB61EAD873E009441F1 /* STConst.m */,
 				31AE8C881EA0E0120061AB6D /* Category */,
 				31AE8C891EA0E0120061AB6D /* Controller */,
 				31AE8C8A1EA0E0120061AB6D /* View */,
@@ -565,6 +575,7 @@
 				31915C111EA4DC5600AE3BD6 /* STRecommendCategoryCell.m in Sources */,
 				31AE8C961EA0F4920061AB6D /* STNewViewController.m in Sources */,
 				31915C1E1EA5986E00AE3BD6 /* STRecommendUserCell.m in Sources */,
+				31DE2AB41EACEFFD009441F1 /* STTopic.m in Sources */,
 				31AE8C5B1EA0DE0B0061AB6D /* main.m in Sources */,
 				31DE2AA01EA8B068009441F1 /* STPushGuideView.m in Sources */,
 				31DE2AAE1EACD1D1009441F1 /* STPictureViewController.m in Sources */,
@@ -574,6 +585,7 @@
 				31DE2A861EA70EB5009441F1 /* STRecommendTagsViewController.m in Sources */,
 				31915C0D1EA4DC2800AE3BD6 /* STRecommendCategory.m in Sources */,
 				31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */,
+				31DE2AB71EAD873E009441F1 /* STConst.m in Sources */,
 				31AE8C9A1EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m in Sources */,
 				31DE2A981EA85382009441F1 /* STVerticalButton.m in Sources */,
 				31AE8C761EA0DF580061AB6D /* AppDelegate.m in Sources */,
