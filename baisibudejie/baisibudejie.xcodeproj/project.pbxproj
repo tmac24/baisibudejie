@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E53E1FB1FCEA1B7006A2D85 /* STMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E1F91FCEA1B7006A2D85 /* STMeViewController.m */; };
 		31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31915C021EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib */; };
 		31915C061EA4833400AE3BD6 /* STRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C051EA4833400AE3BD6 /* STRecommendViewController.m */; };
 		31915C081EA4887800AE3BD6 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C071EA4887800AE3BD6 /* Foundation+Log.m */; };
@@ -24,7 +25,6 @@
 		31AE8C761EA0DF580061AB6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C751EA0DF580061AB6D /* AppDelegate.m */; };
 		31AE8C8D1EA0F45C0061AB6D /* STEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C8C1EA0F45C0061AB6D /* STEssenceViewController.m */; };
 		31AE8C901EA0F4750061AB6D /* STFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C8F1EA0F4750061AB6D /* STFriendTrendsViewController.m */; };
-		31AE8C931EA0F4830061AB6D /* STMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C921EA0F4830061AB6D /* STMeViewController.m */; };
 		31AE8C961EA0F4920061AB6D /* STNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C951EA0F4920061AB6D /* STNewViewController.m */; };
 		31AE8C9A1EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C991EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m */; };
 		31AE8C9D1EA0F5140061AB6D /* UIView+STExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8C9C1EA0F5140061AB6D /* UIView+STExtension.m */; };
@@ -52,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E53E1F91FCEA1B7006A2D85 /* STMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMeViewController.m; sourceTree = "<group>"; };
+		1E53E1FA1FCEA1B7006A2D85 /* STMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMeViewController.h; sourceTree = "<group>"; };
 		2BF02E12A0B833A91BC32730 /* Pods-baisibudejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baisibudejie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-baisibudejie/Pods-baisibudejie.debug.xcconfig"; sourceTree = "<group>"; };
 		31915C021EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		31915C041EA4833400AE3BD6 /* STRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRecommendViewController.h; sourceTree = "<group>"; };
@@ -80,8 +82,6 @@
 		31AE8C8C1EA0F45C0061AB6D /* STEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEssenceViewController.m; sourceTree = "<group>"; };
 		31AE8C8E1EA0F4750061AB6D /* STFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STFriendTrendsViewController.h; sourceTree = "<group>"; };
 		31AE8C8F1EA0F4750061AB6D /* STFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STFriendTrendsViewController.m; sourceTree = "<group>"; };
-		31AE8C911EA0F4830061AB6D /* STMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMeViewController.h; sourceTree = "<group>"; };
-		31AE8C921EA0F4830061AB6D /* STMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMeViewController.m; sourceTree = "<group>"; };
 		31AE8C941EA0F4920061AB6D /* STNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewViewController.h; sourceTree = "<group>"; };
 		31AE8C951EA0F4920061AB6D /* STNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewViewController.m; sourceTree = "<group>"; };
 		31AE8C971EA0F4A60061AB6D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
@@ -148,6 +148,34 @@
 				A0D783374E6D81954FB95680 /* libPods-baisibudejie.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E53E1F71FCEA156006A2D85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1E53E1FC1FCEA1C9006A2D85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1E53E1FD1FCEA1E9006A2D85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1E53E1FE1FCEA1E9006A2D85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		31AE8C4D1EA0DE0B0061AB6D = {
@@ -310,9 +338,9 @@
 		31AE8C7F1EA0E0120061AB6D /* Me-我 */ = {
 			isa = PBXGroup;
 			children = (
+				1E53E1FC1FCEA1C9006A2D85 /* View */,
+				1E53E1F71FCEA156006A2D85 /* Model */,
 				31AE8C801EA0E0120061AB6D /* Controller */,
-				31AE8C811EA0E0120061AB6D /* Model */,
-				31AE8C821EA0E0120061AB6D /* View */,
 			);
 			path = "Me-我";
 			sourceTree = "<group>";
@@ -320,32 +348,18 @@
 		31AE8C801EA0E0120061AB6D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				31AE8C911EA0F4830061AB6D /* STMeViewController.h */,
-				31AE8C921EA0F4830061AB6D /* STMeViewController.m */,
+				1E53E1FA1FCEA1B7006A2D85 /* STMeViewController.h */,
+				1E53E1F91FCEA1B7006A2D85 /* STMeViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		31AE8C811EA0E0120061AB6D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		31AE8C821EA0E0120061AB6D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		31AE8C831EA0E0120061AB6D /* New-新帖 */ = {
 			isa = PBXGroup;
 			children = (
 				31AE8C841EA0E0120061AB6D /* Controller */,
-				31AE8C851EA0E0120061AB6D /* Model */,
-				31AE8C861EA0E0120061AB6D /* View */,
+				1E53E1FE1FCEA1E9006A2D85 /* Model */,
+				1E53E1FD1FCEA1E9006A2D85 /* View */,
 			);
 			path = "New-新帖";
 			sourceTree = "<group>";
@@ -357,20 +371,6 @@
 				31AE8C951EA0F4920061AB6D /* STNewViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		31AE8C851EA0E0120061AB6D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		31AE8C861EA0E0120061AB6D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		31AE8C871EA0E0120061AB6D /* Other-其他 */ = {
@@ -585,6 +585,7 @@
 				31DE2AB41EACEFFD009441F1 /* STTopic.m in Sources */,
 				31AE8C5B1EA0DE0B0061AB6D /* main.m in Sources */,
 				31DE2AA01EA8B068009441F1 /* STPushGuideView.m in Sources */,
+				1E53E1FB1FCEA1B7006A2D85 /* STMeViewController.m in Sources */,
 				31DE2AAE1EACD1D1009441F1 /* STPictureViewController.m in Sources */,
 				31DE2AAB1EACD1BC009441F1 /* STVoiceTableViewController.m in Sources */,
 				31DE2A921EA73AD8009441F1 /* STLoginRegisterViewController.m in Sources */,
@@ -600,7 +601,6 @@
 				31915C081EA4887800AE3BD6 /* Foundation+Log.m in Sources */,
 				31DE2AB11EACD1E1009441F1 /* STWordViewController.m in Sources */,
 				31915C061EA4833400AE3BD6 /* STRecommendViewController.m in Sources */,
-				31AE8C931EA0F4830061AB6D /* STMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
