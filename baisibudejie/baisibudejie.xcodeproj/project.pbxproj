@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E29D9621FCFD17B00C71D47 /* STTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9601FCFD17B00C71D47 /* STTopicCell.m */; };
+		1E29D9631FCFD17B00C71D47 /* STTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E29D9611FCFD17B00C71D47 /* STTopicCell.xib */; };
+		1E29D9661FCFF7D300C71D47 /* NSDate+STExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9651FCFF7D200C71D47 /* NSDate+STExtension.m */; };
+		1E29D9691FD006C400C71D47 /* STTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9681FD006C400C71D47 /* STTopicViewController.m */; };
 		1E53E1FB1FCEA1B7006A2D85 /* STMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E1F91FCEA1B7006A2D85 /* STMeViewController.m */; };
 		31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31915C021EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib */; };
 		31915C061EA4833400AE3BD6 /* STRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31915C051EA4833400AE3BD6 /* STRecommendViewController.m */; };
@@ -52,6 +56,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E29D95F1FCFD17B00C71D47 /* STTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicCell.h; sourceTree = "<group>"; };
+		1E29D9601FCFD17B00C71D47 /* STTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicCell.m; sourceTree = "<group>"; };
+		1E29D9611FCFD17B00C71D47 /* STTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicCell.xib; sourceTree = "<group>"; };
+		1E29D9641FCFF7D200C71D47 /* NSDate+STExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+STExtension.h"; sourceTree = "<group>"; };
+		1E29D9651FCFF7D200C71D47 /* NSDate+STExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+STExtension.m"; sourceTree = "<group>"; };
+		1E29D9671FD006C400C71D47 /* STTopicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicViewController.h; sourceTree = "<group>"; };
+		1E29D9681FD006C400C71D47 /* STTopicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicViewController.m; sourceTree = "<group>"; };
 		1E53E1F91FCEA1B7006A2D85 /* STMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMeViewController.m; sourceTree = "<group>"; };
 		1E53E1FA1FCEA1B7006A2D85 /* STMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMeViewController.h; sourceTree = "<group>"; };
 		2BF02E12A0B833A91BC32730 /* Pods-baisibudejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baisibudejie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-baisibudejie/Pods-baisibudejie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +267,8 @@
 				31DE2AAD1EACD1D1009441F1 /* STPictureViewController.m */,
 				31DE2AAF1EACD1E1009441F1 /* STWordViewController.h */,
 				31DE2AB01EACD1E1009441F1 /* STWordViewController.m */,
+				1E29D9671FD006C400C71D47 /* STTopicViewController.h */,
+				1E29D9681FD006C400C71D47 /* STTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -277,6 +290,9 @@
 				31DE2A8A1EA70EF2009441F1 /* STRecommendTagCell.h */,
 				31DE2A8B1EA70EF2009441F1 /* STRecommendTagCell.m */,
 				31DE2A8C1EA70EF2009441F1 /* STRecommendTagCell.xib */,
+				1E29D95F1FCFD17B00C71D47 /* STTopicCell.h */,
+				1E29D9601FCFD17B00C71D47 /* STTopicCell.m */,
+				1E29D9611FCFD17B00C71D47 /* STTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -396,6 +412,8 @@
 				31AE8C991EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m */,
 				31AE8C9B1EA0F5140061AB6D /* UIView+STExtension.h */,
 				31AE8C9C1EA0F5140061AB6D /* UIView+STExtension.m */,
+				1E29D9641FCFF7D200C71D47 /* NSDate+STExtension.h */,
+				1E29D9651FCFF7D200C71D47 /* NSDate+STExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -499,6 +517,7 @@
 				31915C0A1EA4DB6A00AE3BD6 /* STRecommendViewController.xib in Resources */,
 				31AE8C691EA0DE0B0061AB6D /* LaunchScreen.storyboard in Resources */,
 				31AE8C661EA0DE0B0061AB6D /* Assets.xcassets in Resources */,
+				1E29D9631FCFD17B00C71D47 /* STTopicCell.xib in Resources */,
 				31DE2AA21EA8B07A009441F1 /* STPushGuideView.xib in Resources */,
 				31DE2A8E1EA70EF2009441F1 /* STRecommendTagCell.xib in Resources */,
 				31915C121EA4DC5600AE3BD6 /* STRecommendCategoryCell.xib in Resources */,
@@ -578,12 +597,14 @@
 				31AE8CA31EA0F6F10061AB6D /* STNavigationController.m in Sources */,
 				31DE2A891EA70ED2009441F1 /* STRecommendTag.m in Sources */,
 				31AE8C901EA0F4750061AB6D /* STFriendTrendsViewController.m in Sources */,
+				1E29D9661FCFF7D300C71D47 /* NSDate+STExtension.m in Sources */,
 				31AE8C8D1EA0F45C0061AB6D /* STEssenceViewController.m in Sources */,
 				31915C111EA4DC5600AE3BD6 /* STRecommendCategoryCell.m in Sources */,
 				31AE8C961EA0F4920061AB6D /* STNewViewController.m in Sources */,
 				31915C1E1EA5986E00AE3BD6 /* STRecommendUserCell.m in Sources */,
 				31DE2AB41EACEFFD009441F1 /* STTopic.m in Sources */,
 				31AE8C5B1EA0DE0B0061AB6D /* main.m in Sources */,
+				1E29D9621FCFD17B00C71D47 /* STTopicCell.m in Sources */,
 				31DE2AA01EA8B068009441F1 /* STPushGuideView.m in Sources */,
 				1E53E1FB1FCEA1B7006A2D85 /* STMeViewController.m in Sources */,
 				31DE2AAE1EACD1D1009441F1 /* STPictureViewController.m in Sources */,
@@ -591,6 +612,7 @@
 				31DE2A921EA73AD8009441F1 /* STLoginRegisterViewController.m in Sources */,
 				31DE2AA81EACD1AD009441F1 /* STVideoViewController.m in Sources */,
 				31DE2A861EA70EB5009441F1 /* STRecommendTagsViewController.m in Sources */,
+				1E29D9691FD006C400C71D47 /* STTopicViewController.m in Sources */,
 				31915C0D1EA4DC2800AE3BD6 /* STRecommendCategory.m in Sources */,
 				31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */,
 				31DE2AB71EAD873E009441F1 /* STConst.m in Sources */,

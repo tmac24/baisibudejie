@@ -14,6 +14,8 @@
 #import "STPictureViewController.h"
 #import "STVoiceTableViewController.h"
 
+#import "STTopicViewController.h"
+
 @interface STEssenceViewController ()<UIScrollViewDelegate>
 /** 标签栏红色指示器 */
 @property (nonatomic, weak) UIView *indicatorView;
@@ -52,19 +54,29 @@
  */
 - (void)setupChildVces {
 
-    STAllViewController *all = [[STAllViewController alloc] init];
+    STTopicViewController *all = [[STTopicViewController alloc] init];
+    all.title = @"全部";
+    all.type = STTopicTypeAll;
     [self addChildViewController:all];
     
-    STVideoViewController *video = [[STVideoViewController alloc] init];
+    STTopicViewController *video = [[STTopicViewController alloc] init];
+    video.title = @"视频";
+    video.type = STTopicTypeVideo;
     [self addChildViewController:video];
     
-    STVoiceTableViewController *voice = [[STVoiceTableViewController alloc] init];
+    STTopicViewController *voice = [[STTopicViewController alloc] init];
+    voice.title = @"声音";
+    voice.type = STTopicTypeVoice;;
     [self addChildViewController:voice];
     
-    STPictureViewController *pic = [[STPictureViewController alloc] init];
-    [self addChildViewController:pic];
+    STTopicViewController *picture = [[STTopicViewController alloc] init];
+    picture.title = @"图片";
+    picture.type = STTopicTypePicture;
+    [self addChildViewController:picture];
     
-    STWordViewController *word = [[STWordViewController alloc] init];
+    STTopicViewController *word = [[STTopicViewController alloc] init];
+    word.title = @"段子";
+    word.type = STTopicTypeWord;
     [self addChildViewController:word];
 }
 
@@ -139,16 +151,16 @@
     self.indicatorView = indicatorView;
     
     // 内部的子标签
-    NSArray *titles = @[@"全部", @"视频", @"声音", @"图片", @"段子"];
-    CGFloat width = titlesView.width / titles.count;
+    CGFloat width = titlesView.width / self.childViewControllers.count;
     CGFloat height = titlesView.height;
-    for (NSInteger i = 0; i<titles.count; i++) {
+    for (NSInteger i = 0; i<self.childViewControllers.count; i++) {
         UIButton *button = [[UIButton alloc] init];
         button.tag = i;
         button.height = height;
         button.width = width;
         button.x = i * width;
-        [button setTitle:titles[i] forState:UIControlStateNormal];
+        UIViewController *vc = self.childViewControllers[i];
+        [button setTitle:vc.title forState:UIControlStateNormal];
         //        [button layoutIfNeeded]; // 强制布局(强制更新子控件的frame)
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];//对应上面的选中按钮不能点击，enabled = no;

@@ -6,12 +6,12 @@
 //  Copyright © 2017年 孙涛. All rights reserved.
 //
 
-#import "STWordViewController.h"
+#import "STTopicViewController.h"
 #import "STTopic.h"
 #import "STTopicCell.h"
 
 
-@interface STWordViewController ()
+@interface STTopicViewController ()
 /** 帖子数据 */
 @property (nonatomic, strong) NSMutableArray *topics;
 /** 当前页码 */
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation STWordViewController
+@implementation STTopicViewController
 
 - (NSArray *)topics {
     
@@ -44,7 +44,7 @@ static NSString *const STTopicCellId = @"topic";
     [self setupRefresh];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([STTopicCell class]) bundle:nil] forCellReuseIdentifier:STTopicCellId];
-
+    
 }
 /**
  * 初始化表格
@@ -52,7 +52,7 @@ static NSString *const STTopicCellId = @"topic";
 - (void)setupTableView
 {
     // 设置内边距
-//    CGFloat bottom = self.tabBarController.tabBar.height;
+    //    CGFloat bottom = self.tabBarController.tabBar.height;
     CGFloat top = STTitilesViewY + STTitilesViewH;
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, 0, 0);
     // 设置滚动条的内边距
@@ -63,14 +63,14 @@ static NSString *const STTopicCellId = @"topic";
 }
 
 - (void)setupRefresh {
-
+    
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     //自动更新透明度
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
-
+    
 }
 #pragma mark - 数据处理
 /**
@@ -78,14 +78,14 @@ static NSString *const STTopicCellId = @"topic";
  */
 
 - (void)loadNewTopics {
-
+    
     [self.tableView.mj_footer endRefreshing];
     
     //参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     self.params = params;
     
     //发送请求
@@ -94,7 +94,7 @@ static NSString *const STTopicCellId = @"topic";
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.params != params) return;
         STLog(@"%@",responseObject);
-//        [responseObject writeToFile:@"/Users/readygo/Desktop/practice/topic.plist" atomically:YES];
+        //        [responseObject writeToFile:@"/Users/readygo/Desktop/practice/topic.plist" atomically:YES];
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -116,7 +116,7 @@ static NSString *const STTopicCellId = @"topic";
         // 结束刷新
         [self.tableView.mj_header endRefreshing];
     }];
-
+    
 }
 // 先下拉刷新, 再上拉刷新第5页数据
 
@@ -127,7 +127,7 @@ static NSString *const STTopicCellId = @"topic";
  * 加载更多的帖子数据
  */
 - (void)loadMoreTopics {
-
+    
     //结束下拉
     [self.tableView.mj_header endRefreshing];
     
@@ -135,7 +135,7 @@ static NSString *const STTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     NSInteger page = self.page + 1;
     params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
@@ -173,7 +173,7 @@ static NSString *const STTopicCellId = @"topic";
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     self.tableView.mj_footer.hidden = (self.topics.count == 0);
-
+    
     return self.topics.count;
 }
 
@@ -186,7 +186,7 @@ static NSString *const STTopicCellId = @"topic";
     cell.topic = self.topics[indexPath.row];
     
     return cell;
-
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -195,3 +195,4 @@ static NSString *const STTopicCellId = @"topic";
 }
 
 @end
+
