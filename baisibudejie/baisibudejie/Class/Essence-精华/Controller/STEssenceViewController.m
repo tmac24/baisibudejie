@@ -151,7 +151,7 @@
         [button setTitle:titles[i] forState:UIControlStateNormal];
         //        [button layoutIfNeeded]; // 强制布局(强制更新子控件的frame)
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
+        [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];//对应上面的选中按钮不能点击，enabled = no;
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
         [titlesView addSubview:button];
@@ -168,6 +168,7 @@
         }
     }
     
+    //得把红色指示器添加到最后面
     [titlesView addSubview:indicatorView];
 
 }

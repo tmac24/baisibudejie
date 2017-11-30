@@ -52,11 +52,12 @@
 - (void)setupTableView
 {
     // 设置内边距
-    CGFloat bottom = self.tabBarController.tabBar.height;
+//    CGFloat bottom = self.tabBarController.tabBar.height;
     CGFloat top = STTitilesViewY + STTitilesViewH;
-    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, 0, 0);
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
 }
 
 - (void)setupRefresh {
@@ -90,7 +91,8 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.params != params) return;
-        
+        STLog(@"%@",responseObject);
+//        [responseObject writeToFile:@"/Users/readygo/Desktop/practice/topic.plist" atomically:YES];
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -154,7 +156,7 @@
         [self.tableView reloadData];
         
         // 结束刷新
-        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
         
         // 设置页码
         self.page = page;
@@ -162,7 +164,7 @@
         if (self.params != params) return;
         
         // 结束刷新
-        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     }];
 }
 
