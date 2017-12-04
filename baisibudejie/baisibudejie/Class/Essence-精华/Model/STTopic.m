@@ -10,7 +10,16 @@
 
 @implementation STTopic
 {
-   CGFloat _cellHeight;
+    CGFloat _cellHeight;
+    CGRect _pictureF;
+}
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{
+             @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2"
+             };
 }
 - (NSString *)create_time
 {
@@ -50,9 +59,29 @@
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * STTopicCellMargin, MAXFLOAT);
         // 计算文字的高度
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
-        
         // cell的高度
-        _cellHeight = STTopicCellTextY + textH + STTopicCellBottomBarH + 2 * STTopicCellMargin;
+        // 文字部分的高度
+        _cellHeight = STTopicCellTextY + textH + STTopicCellMargin;
+        
+        // 根据段子的类型来计算cell的高度
+        if (self.type == STTopicTypePicture) { // 图片帖子
+            // 图片显示出来的宽度
+            CGFloat pictureW = maxSize.width;
+            // 显示显示出来的高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            
+            // 计算图片控件的frame
+            CGFloat pictureX = STTopicCellMargin;
+            CGFloat pictureY = STTopicCellTextY + textH + STTopicCellMargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            _cellHeight += pictureH + STTopicCellMargin;
+        } else if (self.type == STTopicTypeVoice) { // 声音帖子
+            
+        }
+        
+        // 底部工具条的高度
+        _cellHeight += STTopicCellBottomBarH + STTopicCellMargin;
     }
     return _cellHeight;
 }

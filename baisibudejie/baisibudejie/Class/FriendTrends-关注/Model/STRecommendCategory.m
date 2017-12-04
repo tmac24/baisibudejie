@@ -10,6 +10,11 @@
 
 @implementation STRecommendCategory
 
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
+}
+
 - (NSMutableArray *)users {
 
     if (!_users) {

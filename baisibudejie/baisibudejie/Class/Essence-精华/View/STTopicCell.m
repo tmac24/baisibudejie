@@ -8,6 +8,7 @@
 
 #import "STTopicCell.h"
 #import "STTopic.h"
+#import "STTopicPictureView.h"
 
 @interface STTopicCell ()
 /** 头像 */
@@ -26,12 +27,24 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 /** 新浪加V */
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
-/** 文字内容 */
+/** 帖子文字内容 */
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
+/** 图片帖子中间图片内容 */
+@property (nonatomic, weak) STTopicPictureView *pictureView;
 
 @end
 
 @implementation STTopicCell
+
+- (STTopicPictureView *)pictureView {
+    
+    if (!_pictureView) {
+        STTopicPictureView *pictureView = [STTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -52,6 +65,7 @@
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.nameLabel.text = topic.name;
     self.createTimeLabel.text = topic.create_time;
+    //设置帖子文字内容
     self.text_label.text = topic.text;
     
     // 设置按钮文字
@@ -59,6 +73,15 @@
     [self setupButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
+    
+    // 根据模型类型(帖子类型)添加对应的内容到cell的中间
+    if (topic.type == STTopicTypePicture) { // 图片帖子
+        self.pictureView.topic = topic;
+        self.pictureView.frame = topic.pictureF;
+    } else if (topic.type == STTopicTypeVoice) { // 声音帖子
+        //        self.voiceView.topic = topic;
+        //        self.voiceView.frame = topic.voiceF;
+    }
 }
 
 - (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder
