@@ -26,6 +26,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 /** 新浪加V */
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
+/** 文字内容 */
+@property (weak, nonatomic) IBOutlet UILabel *text_label;
+
 @end
 
 @implementation STTopicCell
@@ -36,6 +39,7 @@
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
+  
 }
 
 - (void)setTopic:(STTopic *)topic {
@@ -48,6 +52,7 @@
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.nameLabel.text = topic.name;
     self.createTimeLabel.text = topic.create_time;
+    self.text_label.text = topic.text;
     
     // 设置按钮文字
     [self setupButtonTitle:self.dingButton count:topic.ding placeholder:@"顶"];
@@ -76,12 +81,10 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    static CGFloat margin = 10;
-    
-    frame.origin.x = margin;
-    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    frame.origin.x = STTopicCellMargin;
+    frame.size.width -= 2 * STTopicCellMargin;
+    frame.size.height -= STTopicCellMargin;
+    frame.origin.y += STTopicCellMargin;
     
     [super setFrame:frame];
 }

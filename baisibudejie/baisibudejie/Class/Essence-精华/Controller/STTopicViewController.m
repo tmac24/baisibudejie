@@ -93,7 +93,7 @@ static NSString *const STTopicCellId = @"topic";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.params != params) return;
-        STLog(@"%@",responseObject);
+//        STLog(@"%@",responseObject);
         //        [responseObject writeToFile:@"/Users/readygo/Desktop/practice/topic.plist" atomically:YES];
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
@@ -179,8 +179,6 @@ static NSString *const STTopicCellId = @"topic";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    
     STTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:STTopicCellId];
     
     cell.topic = self.topics[indexPath.row];
@@ -191,7 +189,9 @@ static NSString *const STTopicCellId = @"topic";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    STTopic *top = self.topics[indexPath.row];
+    
+    return top.cellHeight;
 }
 
 @end

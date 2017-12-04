@@ -8,12 +8,24 @@
 
 #import "STNavigationController.h"
 
-@interface STNavigationController ()
+@interface STNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
 @implementation STNavigationController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.interactivePopGestureRecognizer.delegate = (id)self;
+    
+    self.navigationBar.translucent = NO;
+    
+}
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    return self.childViewControllers.count > 1;
+}
 /**
  * 当第一次使用这个类的时候会调用一次
  */
@@ -25,11 +37,6 @@
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
 /**
  * 可以在这个方法中拦截所有push进来的控制器

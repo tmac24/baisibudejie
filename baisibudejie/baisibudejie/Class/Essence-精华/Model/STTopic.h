@@ -27,5 +27,11 @@
 @property (nonatomic, assign) NSInteger comment;
 /** 是否为新浪加V用户 0/1 */
 @property (nonatomic, assign, getter=isSina_v) BOOL sina_v;
+
+
+/** 自定义需要的属性 **/
+/** 每个模型的高度 */
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
+
 @end
 
