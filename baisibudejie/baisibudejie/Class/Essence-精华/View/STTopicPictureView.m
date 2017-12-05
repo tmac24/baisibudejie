@@ -8,6 +8,8 @@
 
 #import "STTopicPictureView.h"
 #import "STTopic.h"
+#import "STProgressView.h"
+#import "STShowPictureViewController.h"
 
 @interface STTopicPictureView ()
 /** 图片 */
@@ -16,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 /** 查看大图按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
+/** 进度条控件 */
+@property (weak, nonatomic) IBOutlet STProgressView *progressView;
 @end
 
 @implementation STTopicPictureView
@@ -37,7 +41,9 @@
 
 - (void)showPicture {
     
-    STLogFunc;
+    STShowPictureViewController *showVC = [[STShowPictureViewController alloc] init];
+    showVC.topic = self.topic;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showVC animated:YES completion:nil];
 }
 - (void)setTopic:(STTopic *)topic {
     
@@ -49,7 +55,13 @@
      */
     
     //设置图片
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+//        self.progressView.hidden = NO;
+        CGFloat progress = 1.0 * receivedSize / expectedSize;
+        [self.progressView setProgress:progress animated:NO];
+    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//        self.progressView.hidden = YES;
+    }];
     
     // 判断是否为gif
     NSString *extension = topic.large_image.pathExtension;
@@ -58,7 +70,7 @@
     // 判断是否显示"点击查看全图"
     if (topic.isBigPicture) { // 大图
         self.seeBigButton.hidden = NO;
-        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     } else { // 非大图
         self.seeBigButton.hidden = YES;
         self.imageView.contentMode = UIViewContentModeScaleToFill;
