@@ -20,3 +20,8 @@ UIKIT_EXTERN CGFloat const STTopicCellMargin;
 UIKIT_EXTERN CGFloat const STTopicCellTextY;
 /** 精华-cell-底部工具条的高度 */
 UIKIT_EXTERN CGFloat const STTopicCellBottomBarH;
+
+/** 精华-cell-图片帖子的最大高度 */
+UIKIT_EXTERN CGFloat const STTopicCellPictureMaxH;
+/** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
+UIKIT_EXTERN CGFloat const STTopicCellPictureBreakH;

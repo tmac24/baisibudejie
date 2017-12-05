@@ -67,8 +67,12 @@
         if (self.type == STTopicTypePicture) { // 图片帖子
             // 图片显示出来的宽度
             CGFloat pictureW = maxSize.width;
-            // 显示显示出来的高度
+            // 图片显示出来的高度
             CGFloat pictureH = pictureW * self.height / self.width;
+            if (pictureH >= STTopicCellPictureMaxH) { // 图片高度过长
+                pictureH = STTopicCellPictureBreakH;
+                self.bigPicture = YES; // 大图
+            }
             
             // 计算图片控件的frame
             CGFloat pictureX = STTopicCellMargin;

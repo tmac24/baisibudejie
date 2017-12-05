@@ -37,7 +37,7 @@
 @implementation STTopicCell
 
 - (STTopicPictureView *)pictureView {
-    
+
     if (!_pictureView) {
         STTopicPictureView *pictureView = [STTopicPictureView pictureView];
         [self.contentView addSubview:pictureView];
