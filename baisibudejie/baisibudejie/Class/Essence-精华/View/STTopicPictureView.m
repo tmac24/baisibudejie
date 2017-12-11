@@ -8,7 +8,7 @@
 
 #import "STTopicPictureView.h"
 #import "STTopic.h"
-#import "STProgressView.h"
+//#import "STProgressView.h"
 #import "STShowPictureViewController.h"
 
 @interface STTopicPictureView ()
@@ -19,7 +19,7 @@
 /** 查看大图按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
 /** 进度条控件 */
-@property (weak, nonatomic) IBOutlet STProgressView *progressView;
+//@property (weak, nonatomic) IBOutlet STProgressView *progressView;
 @end
 
 @implementation STTopicPictureView
@@ -53,12 +53,17 @@
      在不知道图片扩展名的情况下, 如何知道图片的真实类型?
      * 取出图片数据的第一个字节, 就可以判断出图片的真实类型
      */
+    // 立马显示最新的进度值(防止因为网速慢, 导致显示的是其他图片的下载进度)
+//    [self.progressView setProgress:topic.pictureProgress animated:NO];
     
     //设置图片
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-//        self.progressView.hidden = NO;
-        CGFloat progress = 1.0 * receivedSize / expectedSize;
-        [self.progressView setProgress:progress animated:NO];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        //        self.progressView.hidden = NO;
+        // 计算进度值
+        //        topic.pictureProgress = 1.0 * receivedSize / expectedSize;
+        // 显示进度值
+        //        [self.progressView setProgress:topic.pictureProgress animated:NO];
+        
     } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
 //        self.progressView.hidden = YES;
     }];

@@ -10,6 +10,7 @@
 		1E20EB471FD67012005D0E9D /* STProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E20EB461FD67012005D0E9D /* STProgressView.m */; };
 		1E20EB4B1FD67A93005D0E9D /* STShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E20EB491FD67A93005D0E9D /* STShowPictureViewController.m */; };
 		1E20EB4C1FD67A93005D0E9D /* STShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E20EB4A1FD67A93005D0E9D /* STShowPictureViewController.xib */; };
+		1E252DA61FD797FC00A1DC16 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E252DA51FD797E800A1DC16 /* Photos.framework */; };
 		1E29D9621FCFD17B00C71D47 /* STTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9601FCFD17B00C71D47 /* STTopicCell.m */; };
 		1E29D9631FCFD17B00C71D47 /* STTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E29D9611FCFD17B00C71D47 /* STTopicCell.xib */; };
 		1E29D9661FCFF7D300C71D47 /* NSDate+STExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9651FCFF7D200C71D47 /* NSDate+STExtension.m */; };
@@ -66,6 +67,7 @@
 		1E20EB481FD67A93005D0E9D /* STShowPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STShowPictureViewController.h; sourceTree = "<group>"; };
 		1E20EB491FD67A93005D0E9D /* STShowPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STShowPictureViewController.m; sourceTree = "<group>"; };
 		1E20EB4A1FD67A93005D0E9D /* STShowPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STShowPictureViewController.xib; sourceTree = "<group>"; };
+		1E252DA51FD797E800A1DC16 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		1E29D95F1FCFD17B00C71D47 /* STTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicCell.h; sourceTree = "<group>"; };
 		1E29D9601FCFD17B00C71D47 /* STTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicCell.m; sourceTree = "<group>"; };
 		1E29D9611FCFD17B00C71D47 /* STTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicCell.xib; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E252DA61FD797FC00A1DC16 /* Photos.framework in Frameworks */,
 				ED66016E5001C05DEE2B9D83 /* libPods-baisibudejie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +172,7 @@
 		03EA87F22A29B6461A121840 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E252DA51FD797E800A1DC16 /* Photos.framework */,
 				A0D783374E6D81954FB95680 /* libPods-baisibudejie.a */,
 			);
 			name = Frameworks;

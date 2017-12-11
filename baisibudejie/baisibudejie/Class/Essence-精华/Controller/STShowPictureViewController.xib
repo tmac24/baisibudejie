@@ -37,7 +37,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37y-X2-UKz">
                     <rect key="frame" x="280" y="617" width="75" height="30"/>
-                    <color key="backgroundColor" red="0.26872166450000001" green="0.26872166450000001" blue="0.26872166450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.26872166450000001" green="0.26872166450000001" blue="0.26872166450000001" alpha="0.49210497359154931" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="PWK-eZ-ak4"/>
                         <constraint firstAttribute="width" constant="75" id="pNe-bB-GJn"/>
@@ -49,7 +49,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-lQ-j97">
                     <rect key="frame" x="190" y="617" width="75" height="30"/>
-                    <color key="backgroundColor" red="0.26872166450000001" green="0.26872166450000001" blue="0.26872166450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.26872166450000001" green="0.26872166450000001" blue="0.26872166450000001" alpha="0.48600706335616439" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="53A-aV-DoD"/>
                         <constraint firstAttribute="height" constant="30" id="nib-sc-43q"/>

@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.roundedCorners = 2;
     self.progressLabel.textColor = [UIColor whiteColor];
 }

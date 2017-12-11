@@ -22,14 +22,6 @@
                         <constraint firstAttribute="height" constant="25" id="BLP-ZL-cji"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-yh-Eze" customClass="STProgressView">
-                    <rect key="frame" x="167" y="108" width="100" height="100"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="27A-62-UC6"/>
-                        <constraint firstAttribute="height" constant="100" id="fR1-z5-m6E"/>
-                    </constraints>
-                </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bzb-42-oRx">
                     <rect key="frame" x="0.0" y="0.0" width="434" height="316"/>
                 </imageView>
@@ -58,9 +50,7 @@
                 <constraint firstItem="zZt-UV-Npa" firstAttribute="top" secondItem="yAf-Nb-gRG" secondAttribute="top" id="Et4-Gn-9Qb"/>
                 <constraint firstItem="yAf-Nb-gRG" firstAttribute="bottom" secondItem="Bzb-42-oRx" secondAttribute="bottom" id="JAz-8P-9yH"/>
                 <constraint firstItem="9ZC-F6-bCH" firstAttribute="leading" secondItem="yAf-Nb-gRG" secondAttribute="leading" id="K0V-jE-dUA"/>
-                <constraint firstItem="BZQ-yh-Eze" firstAttribute="leading" secondItem="yAf-Nb-gRG" secondAttribute="trailing" constant="-267" id="Ssg-hA-Skx"/>
                 <constraint firstItem="yAf-Nb-gRG" firstAttribute="trailing" secondItem="C6i-VH-wgV" secondAttribute="trailing" id="gL5-Mf-0fh"/>
-                <constraint firstItem="BZQ-yh-Eze" firstAttribute="top" secondItem="yAf-Nb-gRG" secondAttribute="bottom" constant="-208" id="h22-5u-47B"/>
                 <constraint firstItem="Bzb-42-oRx" firstAttribute="top" secondItem="yAf-Nb-gRG" secondAttribute="top" id="k1Z-oM-kD7"/>
                 <constraint firstItem="9ZC-F6-bCH" firstAttribute="top" secondItem="yAf-Nb-gRG" secondAttribute="top" constant="20" id="k3V-Ne-bNN"/>
                 <constraint firstItem="yAf-Nb-gRG" firstAttribute="trailing" secondItem="9ZC-F6-bCH" secondAttribute="trailing" id="pNC-VX-6vO"/>
@@ -71,7 +61,6 @@
             <connections>
                 <outlet property="gifView" destination="zZt-UV-Npa" id="bpW-It-PlA"/>
                 <outlet property="imageView" destination="Bzb-42-oRx" id="7pM-xI-d3k"/>
-                <outlet property="progressView" destination="BZQ-yh-Eze" id="XgV-XJ-yZN"/>
                 <outlet property="seeBigButton" destination="C6i-VH-wgV" id="f36-6R-hiH"/>
             </connections>
             <point key="canvasLocation" x="47" y="16"/>

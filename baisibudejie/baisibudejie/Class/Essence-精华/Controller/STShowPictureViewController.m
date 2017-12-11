@@ -8,11 +8,15 @@
 
 #import "STShowPictureViewController.h"
 #import "STTopic.h"
+#import <Photos/Photos.h>
+//#import "STProgressView.h"
 
 @interface STShowPictureViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 /** 图片 */
 @property (nonatomic, weak) UIImageView *imageView;
+//@property (weak, nonatomic) IBOutlet STProgressView *progressView;
+
 @end
 
 @implementation STShowPictureViewController
@@ -41,8 +45,17 @@
         imageView.size = CGSizeMake(pictureW, pictureH);
         imageView.centerY = screenH * 0.5;
     }
+    // 马上显示当前图片的下载进度
+//    [self.progressView setProgress:self.topic.pictureProgress animated:YES];
+ 
+    //下载图片
+    //    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+//        [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:YES];
+    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//        self.progressView.hidden = YES;
+    }];
     
-    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
 }
 - (IBAction)back
 {
@@ -50,7 +63,12 @@
 }
 - (IBAction)save {
     // 将图片写入相册
-    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    if (self.imageView.image == nil) {
+        [SVProgressHUD showErrorWithStatus:@"图片并没下载完毕!"];
+        return;
+    }
+//    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    [self loadImageFinished:self.imageView.image];
 }
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 {
@@ -59,5 +77,24 @@
     } else {
         [SVProgressHUD showSuccessWithStatus:@"保存成功!"];
     }
+}
+- (void)loadImageFinished:(UIImage *)image
+{
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+        
+        //写入图片到相册
+        PHAssetChangeRequest *req = [PHAssetChangeRequest creationRequestForAssetFromImage:image];
+        
+        
+    } completionHandler:^(BOOL success, NSError * _Nullable error) {
+        
+//        NSLog(@"success = %d, error = %@", success, error);
+        if (error) {
+            [SVProgressHUD showErrorWithStatus:@"保存失败!"];
+        } else {
+            [SVProgressHUD showSuccessWithStatus:@"保存成功!"];
+        }
+        
+    }];
 }
 @end
