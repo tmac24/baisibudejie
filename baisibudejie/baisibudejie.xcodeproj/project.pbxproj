@@ -206,6 +206,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1E7F601C207B5659009A524E /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				31DE2AA31EACD19A009441F1 /* STAllViewController.h */,
+				31DE2AA41EACD19A009441F1 /* STAllViewController.m */,
+				31DE2AA61EACD1AD009441F1 /* STVideoViewController.h */,
+				31DE2AA71EACD1AD009441F1 /* STVideoViewController.m */,
+				31DE2AA91EACD1BC009441F1 /* STVoiceTableViewController.h */,
+				31DE2AAA1EACD1BC009441F1 /* STVoiceTableViewController.m */,
+				31DE2AAC1EACD1D1009441F1 /* STPictureViewController.h */,
+				31DE2AAD1EACD1D1009441F1 /* STPictureViewController.m */,
+				31DE2AAF1EACD1E1009441F1 /* STWordViewController.h */,
+				31DE2AB01EACD1E1009441F1 /* STWordViewController.m */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
 		31AE8C4D1EA0DE0B0061AB6D = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +277,7 @@
 		31AE8C771EA0E0120061AB6D /* Essence-精华 */ = {
 			isa = PBXGroup;
 			children = (
+				1E7F601C207B5659009A524E /* Old */,
 				31AE8C781EA0E0120061AB6D /* Controller */,
 				31AE8C791EA0E0120061AB6D /* Model */,
 				31AE8C7A1EA0E0120061AB6D /* View */,
@@ -274,16 +292,6 @@
 				31AE8C8C1EA0F45C0061AB6D /* STEssenceViewController.m */,
 				31DE2A841EA70EB5009441F1 /* STRecommendTagsViewController.h */,
 				31DE2A851EA70EB5009441F1 /* STRecommendTagsViewController.m */,
-				31DE2AA31EACD19A009441F1 /* STAllViewController.h */,
-				31DE2AA41EACD19A009441F1 /* STAllViewController.m */,
-				31DE2AA61EACD1AD009441F1 /* STVideoViewController.h */,
-				31DE2AA71EACD1AD009441F1 /* STVideoViewController.m */,
-				31DE2AA91EACD1BC009441F1 /* STVoiceTableViewController.h */,
-				31DE2AAA1EACD1BC009441F1 /* STVoiceTableViewController.m */,
-				31DE2AAC1EACD1D1009441F1 /* STPictureViewController.h */,
-				31DE2AAD1EACD1D1009441F1 /* STPictureViewController.m */,
-				31DE2AAF1EACD1E1009441F1 /* STWordViewController.h */,
-				31DE2AB01EACD1E1009441F1 /* STWordViewController.m */,
 				1E29D9671FD006C400C71D47 /* STTopicViewController.h */,
 				1E29D9681FD006C400C71D47 /* STTopicViewController.m */,
 				1E20EB481FD67A93005D0E9D /* STShowPictureViewController.h */,

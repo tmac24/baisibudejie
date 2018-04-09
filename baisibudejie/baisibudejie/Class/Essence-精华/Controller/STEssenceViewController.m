@@ -8,11 +8,11 @@
 
 #import "STEssenceViewController.h"
 #import "STRecommendTagsViewController.h"
-#import "STAllViewController.h"
-#import "STWordViewController.h"
-#import "STVideoViewController.h"
-#import "STPictureViewController.h"
-#import "STVoiceTableViewController.h"
+//#import "STAllViewController.h"
+//#import "STWordViewController.h"
+//#import "STVideoViewController.h"
+//#import "STPictureViewController.h"
+//#import "STVoiceTableViewController.h"
 
 #import "STTopicViewController.h"
 
