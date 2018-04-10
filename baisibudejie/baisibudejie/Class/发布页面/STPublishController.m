@@ -51,6 +51,8 @@
         button.x = buttonStartX + col * (xMargin + buttonW);
         button.y = buttonStartY + row * buttonH;
         [self.view addSubview:button];
+        
+        
     }
 }
 - (IBAction)cancelClick:(id)sender {
