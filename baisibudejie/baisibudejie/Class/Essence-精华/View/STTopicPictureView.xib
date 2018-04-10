@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,6 +24,7 @@
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bzb-42-oRx">
                     <rect key="frame" x="0.0" y="0.0" width="434" height="316"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="zZt-UV-Npa">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
@@ -40,8 +41,16 @@
                     <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="点击查看全图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
                 </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sq-rx-jci" userLabel="进度条" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="167" y="108" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.047058823530000002" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="HbQ-Ih-3AK"/>
+                        <constraint firstAttribute="width" constant="100" id="QDT-go-kgK"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Bzb-42-oRx" firstAttribute="leading" secondItem="yAf-Nb-gRG" secondAttribute="leading" id="0hj-5K-t7g"/>
                 <constraint firstItem="C6i-VH-wgV" firstAttribute="leading" secondItem="yAf-Nb-gRG" secondAttribute="leading" id="7K4-GX-SDJ"/>
@@ -50,10 +59,12 @@
                 <constraint firstItem="zZt-UV-Npa" firstAttribute="top" secondItem="yAf-Nb-gRG" secondAttribute="top" id="Et4-Gn-9Qb"/>
                 <constraint firstItem="yAf-Nb-gRG" firstAttribute="bottom" secondItem="Bzb-42-oRx" secondAttribute="bottom" id="JAz-8P-9yH"/>
                 <constraint firstItem="9ZC-F6-bCH" firstAttribute="leading" secondItem="yAf-Nb-gRG" secondAttribute="leading" id="K0V-jE-dUA"/>
+                <constraint firstItem="4sq-rx-jci" firstAttribute="centerY" secondItem="KMc-4X-oel" secondAttribute="centerY" id="NQh-RV-PHi"/>
                 <constraint firstItem="yAf-Nb-gRG" firstAttribute="trailing" secondItem="C6i-VH-wgV" secondAttribute="trailing" id="gL5-Mf-0fh"/>
                 <constraint firstItem="Bzb-42-oRx" firstAttribute="top" secondItem="yAf-Nb-gRG" secondAttribute="top" id="k1Z-oM-kD7"/>
                 <constraint firstItem="9ZC-F6-bCH" firstAttribute="top" secondItem="yAf-Nb-gRG" secondAttribute="top" constant="20" id="k3V-Ne-bNN"/>
                 <constraint firstItem="yAf-Nb-gRG" firstAttribute="trailing" secondItem="9ZC-F6-bCH" secondAttribute="trailing" id="pNC-VX-6vO"/>
+                <constraint firstItem="4sq-rx-jci" firstAttribute="centerX" secondItem="KMc-4X-oel" secondAttribute="centerX" id="rhM-fo-fJW"/>
                 <constraint firstItem="zZt-UV-Npa" firstAttribute="leading" secondItem="yAf-Nb-gRG" secondAttribute="leading" id="wAg-5C-SbR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -61,6 +72,7 @@
             <connections>
                 <outlet property="gifView" destination="zZt-UV-Npa" id="bpW-It-PlA"/>
                 <outlet property="imageView" destination="Bzb-42-oRx" id="7pM-xI-d3k"/>
+                <outlet property="progressView" destination="4sq-rx-jci" id="CYm-v8-C5Z"/>
                 <outlet property="seeBigButton" destination="C6i-VH-wgV" id="f36-6R-hiH"/>
             </connections>
             <point key="canvasLocation" x="47" y="16"/>

@@ -8,7 +8,6 @@
 
 #import "STRecommendTagCell.h"
 #import "STRecommendTag.h"
-#import <UIImageView+WebCache.h>
 
 @interface STRecommendTagCell()
 @property (weak, nonatomic) IBOutlet UIImageView *imageListImageView;

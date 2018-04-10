@@ -48,13 +48,13 @@
     // 马上显示当前图片的下载进度
 //    [self.progressView setProgress:self.topic.pictureProgress animated:YES];
  
-    //下载图片
-    //    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-//        [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:YES];
-    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-//        self.progressView.hidden = YES;
-    }];
+    //下载图片    
+    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
+//    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+////        [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:YES];
+//    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+////        self.progressView.hidden = YES;
+//    }];
     
 }
 - (IBAction)back

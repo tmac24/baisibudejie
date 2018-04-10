@@ -8,7 +8,6 @@
 
 #import "STRecommendUserCell.h"
 #import "STRecommendUser.h"
-#import <UIImageView+WebCache.h>
 
 @interface STRecommendUserCell ()
 

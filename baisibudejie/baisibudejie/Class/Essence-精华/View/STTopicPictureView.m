@@ -1,4 +1,4 @@
-//
+    //
 //  STTopicPictureView.m
 //  baisibudejie
 //
@@ -10,8 +10,11 @@
 #import "STTopic.h"
 //#import "STProgressView.h"
 #import "STShowPictureViewController.h"
+#import "DALabeledCircularProgressView.h"
 
 @interface STTopicPictureView ()
+@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
+
 /** 图片 */
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 /** gif标识 */
@@ -57,16 +60,19 @@
 //    [self.progressView setProgress:topic.pictureProgress animated:NO];
     
     //设置图片
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        //        self.progressView.hidden = NO;
-        // 计算进度值
-        //        topic.pictureProgress = 1.0 * receivedSize / expectedSize;
-        // 显示进度值
-        //        [self.progressView setProgress:topic.pictureProgress animated:NO];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
-    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-//        self.progressView.hidden = YES;
+        self.progressView.hidden = NO;
+        
+        //计算进度值
+        topic.pictureProgress = 1.0 * receivedSize / expectedSize;
+//        NSLog(@"%f",topic.pictureProgress);
+        //显示进度值
+        [self.progressView setProgress:topic.pictureProgress animated:NO];
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.progressView.hidden = YES;
     }];
+    
     
     // 判断是否为gif
     NSString *extension = topic.large_image.pathExtension;

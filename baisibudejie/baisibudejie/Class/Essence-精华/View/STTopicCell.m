@@ -76,8 +76,9 @@
     
     // 根据模型类型(帖子类型)添加对应的内容到cell的中间
     if (topic.type == STTopicTypePicture) { // 图片帖子
-        self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
+
+        self.pictureView.topic = topic;
     } else if (topic.type == STTopicTypeVoice) { // 声音帖子
         //        self.voiceView.topic = topic;
         //        self.voiceView.frame = topic.voiceF;
