@@ -76,9 +76,10 @@
     
     // 根据模型类型(帖子类型)添加对应的内容到cell的中间
     if (topic.type == STTopicTypePicture) { // 图片帖子
+        
+        self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
 
-        self.pictureView.topic = topic;
     } else if (topic.type == STTopicTypeVoice) { // 声音帖子
         //        self.voiceView.topic = topic;
         //        self.voiceView.frame = topic.voiceF;
@@ -87,14 +88,7 @@
 
 - (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder
 {
-    //    NSString *title = nil;
-    //    if (count == 0) {
-    //        title = placeholder;
-    //    } else if (count > 10000) {
-    //        title = [NSString stringWithFormat:@"%.1f万", count / 10000.0];
-    //    } else {
-    //        title = [NSString stringWithFormat:@"%zd", count];
-    //    }
+
     if (count > 10000) {
         placeholder = [NSString stringWithFormat:@"%.1f万", count / 10000.0];
     } else if (count > 0) {
