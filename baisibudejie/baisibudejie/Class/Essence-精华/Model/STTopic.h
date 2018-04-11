@@ -51,5 +51,8 @@
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 /** 图片的下载进度 */
 @property (nonatomic, assign) CGFloat pictureProgress;
+
+/** 声音控件的frame */
+@property (nonatomic, assign, readonly) CGRect voiceF;
 @end
 

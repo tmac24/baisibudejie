@@ -9,6 +9,7 @@
 #import "STTopicCell.h"
 #import "STTopic.h"
 #import "STTopicPictureView.h"
+#import "STTopicVoiceView.h"
 
 @interface STTopicCell ()
 /** 头像 */
@@ -31,6 +32,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
 /** 图片帖子中间图片内容 */
 @property (nonatomic, weak) STTopicPictureView *pictureView;
+/** 声音帖子中间图片内容 */
+@property (nonatomic, weak) STTopicVoiceView *voiceView;
 
 @end
 
@@ -46,9 +49,21 @@
     return _pictureView;
 }
 
+- (STTopicVoiceView *)voiceView {
+    
+    if (!_voiceView) {
+        STTopicVoiceView *voiceView = [STTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
 
+    self.autoresizingMask = UIViewAutoresizingNone;
+    
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
@@ -74,16 +89,19 @@
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
     
+    
     // 根据模型类型(帖子类型)添加对应的内容到cell的中间
     if (topic.type == STTopicTypePicture) { // 图片帖子
         
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
 
+
     } else if (topic.type == STTopicTypeVoice) { // 声音帖子
         //        self.voiceView.topic = topic;
-        //        self.voiceView.frame = topic.voiceF;
+                self.voiceView.frame = topic.voiceF;
     }
+    
 }
 
 - (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder

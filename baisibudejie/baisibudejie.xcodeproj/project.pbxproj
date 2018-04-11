@@ -33,6 +33,8 @@
 		1E29D9661FCFF7D300C71D47 /* NSDate+STExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9651FCFF7D200C71D47 /* NSDate+STExtension.m */; };
 		1E29D9691FD006C400C71D47 /* STTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9681FD006C400C71D47 /* STTopicViewController.m */; };
 		1E2D4FA4207DBAEA00606949 /* STPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2D4FA3207DBAEA00606949 /* STPublishView.xib */; };
+		1E2D4FA7207DEF8400606949 /* STTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D4FA6207DEF8400606949 /* STTopicVoiceView.m */; };
+		1E2D4FA9207DEF9400606949 /* STTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2D4FA8207DEF9400606949 /* STTopicVoiceView.xib */; };
 		1E4BD5DA1FD545F000B3B402 /* STTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4BD5D91FD545F000B3B402 /* STTopicPictureView.m */; };
 		1E4BD5DC1FD545FD00B3B402 /* STTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4BD5DB1FD545FD00B3B402 /* STTopicPictureView.xib */; };
 		1E53E1FB1FCEA1B7006A2D85 /* STMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E1F91FCEA1B7006A2D85 /* STMeViewController.m */; };
@@ -129,6 +131,9 @@
 		1E29D9671FD006C400C71D47 /* STTopicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicViewController.h; sourceTree = "<group>"; };
 		1E29D9681FD006C400C71D47 /* STTopicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicViewController.m; sourceTree = "<group>"; };
 		1E2D4FA3207DBAEA00606949 /* STPublishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STPublishView.xib; sourceTree = "<group>"; };
+		1E2D4FA5207DEF8400606949 /* STTopicVoiceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicVoiceView.h; sourceTree = "<group>"; };
+		1E2D4FA6207DEF8400606949 /* STTopicVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicVoiceView.m; sourceTree = "<group>"; };
+		1E2D4FA8207DEF9400606949 /* STTopicVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicVoiceView.xib; sourceTree = "<group>"; };
 		1E4BD5D81FD545F000B3B402 /* STTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicPictureView.h; sourceTree = "<group>"; };
 		1E4BD5D91FD545F000B3B402 /* STTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicPictureView.m; sourceTree = "<group>"; };
 		1E4BD5DB1FD545FD00B3B402 /* STTopicPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicPictureView.xib; sourceTree = "<group>"; };
@@ -427,6 +432,8 @@
 		31AE8C7A1EA0E0120061AB6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1E20EB451FD67012005D0E9D /* STProgressView.h */,
+				1E20EB461FD67012005D0E9D /* STProgressView.m */,
 				31DE2A8A1EA70EF2009441F1 /* STRecommendTagCell.h */,
 				31DE2A8B1EA70EF2009441F1 /* STRecommendTagCell.m */,
 				31DE2A8C1EA70EF2009441F1 /* STRecommendTagCell.xib */,
@@ -436,8 +443,9 @@
 				1E4BD5D81FD545F000B3B402 /* STTopicPictureView.h */,
 				1E4BD5D91FD545F000B3B402 /* STTopicPictureView.m */,
 				1E4BD5DB1FD545FD00B3B402 /* STTopicPictureView.xib */,
-				1E20EB451FD67012005D0E9D /* STProgressView.h */,
-				1E20EB461FD67012005D0E9D /* STProgressView.m */,
+				1E2D4FA5207DEF8400606949 /* STTopicVoiceView.h */,
+				1E2D4FA6207DEF8400606949 /* STTopicVoiceView.m */,
+				1E2D4FA8207DEF9400606949 /* STTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -674,6 +682,7 @@
 				31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */,
 				31AE8C641EA0DE0B0061AB6D /* Main.storyboard in Resources */,
 				1E2D4FA4207DBAEA00606949 /* STPublishView.xib in Resources */,
+				1E2D4FA9207DEF9400606949 /* STTopicVoiceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +766,7 @@
 				1E20EB471FD67012005D0E9D /* STProgressView.m in Sources */,
 				31915C111EA4DC5600AE3BD6 /* STRecommendCategoryCell.m in Sources */,
 				31AE8C961EA0F4920061AB6D /* STNewViewController.m in Sources */,
+				1E2D4FA7207DEF8400606949 /* STTopicVoiceView.m in Sources */,
 				1E2752C7207C651E00A89ADC /* UIImage+MultiFormat.m in Sources */,
 				31915C1E1EA5986E00AE3BD6 /* STRecommendUserCell.m in Sources */,
 				31DE2AB41EACEFFD009441F1 /* STTopic.m in Sources */,

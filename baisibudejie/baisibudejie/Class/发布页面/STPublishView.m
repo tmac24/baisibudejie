@@ -43,7 +43,7 @@ static UIWindow *window_;
 
 - (void)awakeFromNib {
     
-//    [super awakeFromNib];
+    [super awakeFromNib];
     
     // 不能被点击
     self.userInteractionEnabled = NO;

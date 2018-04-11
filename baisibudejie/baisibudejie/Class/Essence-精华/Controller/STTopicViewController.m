@@ -179,9 +179,14 @@ static NSString *const STTopicCellId = @"topic";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    STTopic *top = self.topics[indexPath.row];
+    [top cellHeight];
+    
     STTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:STTopicCellId];
     
     cell.topic = self.topics[indexPath.row];
+
+    
     
     return cell;
     
