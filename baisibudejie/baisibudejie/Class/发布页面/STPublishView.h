@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface STPublishController : UIViewController
-
+@interface STPublishView : UIView
+/**
+ * 显示
+ */
++ (void)show;
 @end

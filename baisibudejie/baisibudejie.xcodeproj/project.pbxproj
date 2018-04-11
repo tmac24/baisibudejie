@@ -27,12 +27,12 @@
 		1E2752CA207C651E00A89ADC /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2752BC207C651E00A89ADC /* UIView+WebCacheOperation.m */; };
 		1E2752D0207C6A7900A89ADC /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2752CD207C6A7900A89ADC /* DACircularProgressView.m */; };
 		1E2752D1207C6A7900A89ADC /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2752CF207C6A7900A89ADC /* DALabeledCircularProgressView.m */; };
-		1E2752D9207CBC4A00A89ADC /* STPublishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2752D7207CBC4A00A89ADC /* STPublishController.m */; };
-		1E2752DA207CBC4A00A89ADC /* STPublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2752D8207CBC4A00A89ADC /* STPublishController.xib */; };
+		1E2752D9207CBC4A00A89ADC /* STPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2752D7207CBC4A00A89ADC /* STPublishView.m */; };
 		1E29D9621FCFD17B00C71D47 /* STTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9601FCFD17B00C71D47 /* STTopicCell.m */; };
 		1E29D9631FCFD17B00C71D47 /* STTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E29D9611FCFD17B00C71D47 /* STTopicCell.xib */; };
 		1E29D9661FCFF7D300C71D47 /* NSDate+STExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9651FCFF7D200C71D47 /* NSDate+STExtension.m */; };
 		1E29D9691FD006C400C71D47 /* STTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E29D9681FD006C400C71D47 /* STTopicViewController.m */; };
+		1E2D4FA4207DBAEA00606949 /* STPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2D4FA3207DBAEA00606949 /* STPublishView.xib */; };
 		1E4BD5DA1FD545F000B3B402 /* STTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4BD5D91FD545F000B3B402 /* STTopicPictureView.m */; };
 		1E4BD5DC1FD545FD00B3B402 /* STTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4BD5DB1FD545FD00B3B402 /* STTopicPictureView.xib */; };
 		1E53E1FB1FCEA1B7006A2D85 /* STMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E1F91FCEA1B7006A2D85 /* STMeViewController.m */; };
@@ -119,9 +119,8 @@
 		1E2752CD207C6A7900A89ADC /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
 		1E2752CE207C6A7900A89ADC /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALabeledCircularProgressView.h; sourceTree = "<group>"; };
 		1E2752CF207C6A7900A89ADC /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
-		1E2752D6207CBC4A00A89ADC /* STPublishController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STPublishController.h; sourceTree = "<group>"; };
-		1E2752D7207CBC4A00A89ADC /* STPublishController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STPublishController.m; sourceTree = "<group>"; };
-		1E2752D8207CBC4A00A89ADC /* STPublishController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STPublishController.xib; sourceTree = "<group>"; };
+		1E2752D6207CBC4A00A89ADC /* STPublishView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STPublishView.h; sourceTree = "<group>"; };
+		1E2752D7207CBC4A00A89ADC /* STPublishView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STPublishView.m; sourceTree = "<group>"; };
 		1E29D95F1FCFD17B00C71D47 /* STTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicCell.h; sourceTree = "<group>"; };
 		1E29D9601FCFD17B00C71D47 /* STTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicCell.m; sourceTree = "<group>"; };
 		1E29D9611FCFD17B00C71D47 /* STTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicCell.xib; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		1E29D9651FCFF7D200C71D47 /* NSDate+STExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+STExtension.m"; sourceTree = "<group>"; };
 		1E29D9671FD006C400C71D47 /* STTopicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicViewController.h; sourceTree = "<group>"; };
 		1E29D9681FD006C400C71D47 /* STTopicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicViewController.m; sourceTree = "<group>"; };
+		1E2D4FA3207DBAEA00606949 /* STPublishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STPublishView.xib; sourceTree = "<group>"; };
 		1E4BD5D81FD545F000B3B402 /* STTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicPictureView.h; sourceTree = "<group>"; };
 		1E4BD5D91FD545F000B3B402 /* STTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicPictureView.m; sourceTree = "<group>"; };
 		1E4BD5DB1FD545FD00B3B402 /* STTopicPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicPictureView.xib; sourceTree = "<group>"; };
@@ -282,9 +282,9 @@
 		1E2752D5207CBBF800A89ADC /* 发布页面 */ = {
 			isa = PBXGroup;
 			children = (
-				1E2752D6207CBC4A00A89ADC /* STPublishController.h */,
-				1E2752D7207CBC4A00A89ADC /* STPublishController.m */,
-				1E2752D8207CBC4A00A89ADC /* STPublishController.xib */,
+				1E2752D6207CBC4A00A89ADC /* STPublishView.h */,
+				1E2752D7207CBC4A00A89ADC /* STPublishView.m */,
+				1E2D4FA3207DBAEA00606949 /* STPublishView.xib */,
 			);
 			path = "发布页面";
 			sourceTree = "<group>";
@@ -662,7 +662,6 @@
 			files = (
 				31915C1F1EA5986E00AE3BD6 /* STRecommendUserCell.xib in Resources */,
 				31915C0A1EA4DB6A00AE3BD6 /* STRecommendViewController.xib in Resources */,
-				1E2752DA207CBC4A00A89ADC /* STPublishController.xib in Resources */,
 				1E20EB4C1FD67A93005D0E9D /* STShowPictureViewController.xib in Resources */,
 				31AE8C691EA0DE0B0061AB6D /* LaunchScreen.storyboard in Resources */,
 				31AE8C661EA0DE0B0061AB6D /* Assets.xcassets in Resources */,
@@ -674,6 +673,7 @@
 				31DE2A951EA8486F009441F1 /* STLoginRegisterViewController.xib in Resources */,
 				31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */,
 				31AE8C641EA0DE0B0061AB6D /* Main.storyboard in Resources */,
+				1E2D4FA4207DBAEA00606949 /* STPublishView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,7 +747,7 @@
 				31AE8C9D1EA0F5140061AB6D /* UIView+STExtension.m in Sources */,
 				31DE2AA51EACD19A009441F1 /* STAllViewController.m in Sources */,
 				31AE8CA31EA0F6F10061AB6D /* STNavigationController.m in Sources */,
-				1E2752D9207CBC4A00A89ADC /* STPublishController.m in Sources */,
+				1E2752D9207CBC4A00A89ADC /* STPublishView.m in Sources */,
 				1E2752D1207C6A7900A89ADC /* DALabeledCircularProgressView.m in Sources */,
 				31DE2A891EA70ED2009441F1 /* STRecommendTag.m in Sources */,
 				31AE8C901EA0F4750061AB6D /* STFriendTrendsViewController.m in Sources */,

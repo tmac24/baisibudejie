@@ -6,4 +6,5 @@ target 'baisibudejie' do
     pod “MJExtension”
     pod “MJRefresh”
 #    pod "DACircularProgress"
+    pod "pop"
 end

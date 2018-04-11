@@ -7,7 +7,7 @@
 //
 
 #import "STTabBar.h"
-#import "STPublishController.h"
+#import "STPublishView.h"
 
 @interface STTabBar ()
 /** 发布按钮 */
@@ -35,8 +35,7 @@
 }
 
 - (void)publishClick {
-    STPublishController *publishVC = [[STPublishController alloc] init];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publishVC animated:NO completion:nil];
+    [STPublishView show];
 }
 
 - (void)layoutSubviews
