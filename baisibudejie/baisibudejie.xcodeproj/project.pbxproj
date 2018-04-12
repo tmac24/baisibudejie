@@ -10,6 +10,8 @@
 		1E20EB471FD67012005D0E9D /* STProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E20EB461FD67012005D0E9D /* STProgressView.m */; };
 		1E20EB4B1FD67A93005D0E9D /* STShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E20EB491FD67A93005D0E9D /* STShowPictureViewController.m */; };
 		1E20EB4C1FD67A93005D0E9D /* STShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E20EB4A1FD67A93005D0E9D /* STShowPictureViewController.xib */; };
+		1E22A2D2207EF8F800D15839 /* STTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E22A2D1207EF8F800D15839 /* STTopicVideoView.m */; };
+		1E22A2D4207EFAA300D15839 /* STTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E22A2D3207EFAA300D15839 /* STTopicVideoView.xib */; };
 		1E252DA61FD797FC00A1DC16 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E252DA51FD797E800A1DC16 /* Photos.framework */; };
 		1E2752BD207C651E00A89ADC /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2752A1207C651E00A89ADC /* NSData+ImageContentType.m */; };
 		1E2752BE207C651E00A89ADC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2752A3207C651E00A89ADC /* SDImageCache.m */; };
@@ -87,6 +89,9 @@
 		1E20EB481FD67A93005D0E9D /* STShowPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STShowPictureViewController.h; sourceTree = "<group>"; };
 		1E20EB491FD67A93005D0E9D /* STShowPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STShowPictureViewController.m; sourceTree = "<group>"; };
 		1E20EB4A1FD67A93005D0E9D /* STShowPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STShowPictureViewController.xib; sourceTree = "<group>"; };
+		1E22A2D0207EF8F800D15839 /* STTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicVideoView.h; sourceTree = "<group>"; };
+		1E22A2D1207EF8F800D15839 /* STTopicVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicVideoView.m; sourceTree = "<group>"; };
+		1E22A2D3207EFAA300D15839 /* STTopicVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicVideoView.xib; sourceTree = "<group>"; };
 		1E252DA51FD797E800A1DC16 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		1E2752A0207C651E00A89ADC /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		1E2752A1207C651E00A89ADC /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
@@ -446,6 +451,9 @@
 				1E2D4FA5207DEF8400606949 /* STTopicVoiceView.h */,
 				1E2D4FA6207DEF8400606949 /* STTopicVoiceView.m */,
 				1E2D4FA8207DEF9400606949 /* STTopicVoiceView.xib */,
+				1E22A2D0207EF8F800D15839 /* STTopicVideoView.h */,
+				1E22A2D1207EF8F800D15839 /* STTopicVideoView.m */,
+				1E22A2D3207EFAA300D15839 /* STTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -681,6 +689,7 @@
 				31DE2A951EA8486F009441F1 /* STLoginRegisterViewController.xib in Resources */,
 				31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */,
 				31AE8C641EA0DE0B0061AB6D /* Main.storyboard in Resources */,
+				1E22A2D4207EFAA300D15839 /* STTopicVideoView.xib in Resources */,
 				1E2D4FA4207DBAEA00606949 /* STPublishView.xib in Resources */,
 				1E2D4FA9207DEF9400606949 /* STTopicVoiceView.xib in Resources */,
 			);
@@ -785,6 +794,7 @@
 				31DE2AA81EACD1AD009441F1 /* STVideoViewController.m in Sources */,
 				31DE2A861EA70EB5009441F1 /* STRecommendTagsViewController.m in Sources */,
 				1E2752C9207C651E00A89ADC /* UIImageView+WebCache.m in Sources */,
+				1E22A2D2207EF8F800D15839 /* STTopicVideoView.m in Sources */,
 				1E29D9691FD006C400C71D47 /* STTopicViewController.m in Sources */,
 				1E2752CA207C651E00A89ADC /* UIView+WebCacheOperation.m in Sources */,
 				1E4BD5DA1FD545F000B3B402 /* STTopicPictureView.m in Sources */,

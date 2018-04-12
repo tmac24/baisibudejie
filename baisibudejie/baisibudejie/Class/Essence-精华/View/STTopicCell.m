@@ -10,6 +10,7 @@
 #import "STTopic.h"
 #import "STTopicPictureView.h"
 #import "STTopicVoiceView.h"
+#import "STTopicVideoView.h"
 
 @interface STTopicCell ()
 /** 头像 */
@@ -34,10 +35,22 @@
 @property (nonatomic, weak) STTopicPictureView *pictureView;
 /** 声音帖子中间图片内容 */
 @property (nonatomic, weak) STTopicVoiceView *voiceView;
+/** 视频帖子中间的内容 */
+@property (nonatomic, weak) STTopicVideoView *videoView;
 
 @end
 
 @implementation STTopicCell
+
+- (STTopicVideoView *)videoView {
+    
+    if (!_videoView) {
+        STTopicVideoView *videoView = [STTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
 
 - (STTopicPictureView *)pictureView {
 
@@ -92,14 +105,30 @@
     
     // 根据模型类型(帖子类型)添加对应的内容到cell的中间
     if (topic.type == STTopicTypePicture) { // 图片帖子
-        
+        self.pictureView.hidden = NO;
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
         
-        
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     } else if (topic.type == STTopicTypeVoice) { // 声音帖子
+        self.voiceView.hidden = NO;
         self.voiceView.topic = topic;
         self.voiceView.frame = topic.voiceF;
+        
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    } else if (topic.type == STTopicTypeVideo) { // 视频帖子
+        self.videoView.hidden = NO;
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoF;
+        
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+    } else { // 段子帖子
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
     }
     
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RY1-JH-H3s">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUR-FT-3em">
-                    <rect key="frame" x="15" y="40" width="35" height="35"/>
+                    <rect key="frame" x="15" y="20" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="35" id="Uze-yX-Cw3"/>
                         <constraint firstAttribute="height" constant="35" id="yeS-Mc-HNH"/>
@@ -36,7 +36,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37y-X2-UKz">
-                    <rect key="frame" x="280" y="617" width="75" height="30"/>
+                    <rect key="frame" x="280" y="627" width="75" height="30"/>
                     <color key="backgroundColor" red="0.26872166450000001" green="0.26872166450000001" blue="0.26872166450000001" alpha="0.49210497359154931" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="PWK-eZ-ak4"/>
@@ -48,7 +48,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-lQ-j97">
-                    <rect key="frame" x="190" y="617" width="75" height="30"/>
+                    <rect key="frame" x="190" y="627" width="75" height="30"/>
                     <color key="backgroundColor" red="0.26872166450000001" green="0.26872166450000001" blue="0.26872166450000001" alpha="0.48600706335616439" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="53A-aV-DoD"/>
@@ -60,14 +60,14 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="YUR-FT-3em" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="4yw-bz-pEE"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="8ym-lQ-j97" secondAttribute="bottom" constant="20" id="Few-2S-eKe"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="8ym-lQ-j97" secondAttribute="bottom" constant="10" id="Few-2S-eKe"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="37y-X2-UKz" secondAttribute="trailing" constant="20" id="HkW-pe-SDW"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="RY1-JH-H3s" secondAttribute="bottom" id="KVA-0y-MCH"/>
-                <constraint firstItem="YUR-FT-3em" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="L4g-4u-fih"/>
+                <constraint firstItem="YUR-FT-3em" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="L4g-4u-fih"/>
                 <constraint firstItem="37y-X2-UKz" firstAttribute="leading" secondItem="8ym-lQ-j97" secondAttribute="trailing" constant="15" id="MYc-Mh-fS7"/>
                 <constraint firstItem="RY1-JH-H3s" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="TAV-zr-5TX"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="37y-X2-UKz" secondAttribute="bottom" constant="20" id="Tg2-ha-VS7"/>
-                <constraint firstItem="RY1-JH-H3s" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="gtj-Zx-d1f"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="37y-X2-UKz" secondAttribute="bottom" constant="10" id="Tg2-ha-VS7"/>
+                <constraint firstItem="RY1-JH-H3s" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="X9w-Ga-e5w"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="RY1-JH-H3s" secondAttribute="trailing" id="qyR-SM-TOh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
