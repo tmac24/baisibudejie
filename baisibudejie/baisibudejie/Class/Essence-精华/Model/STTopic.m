@@ -86,8 +86,8 @@
             CGFloat voiceW = maxSize.width;
             CGFloat voiceH = voiceW * self.height / self.width;
             _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
-            NSLog(@"%f---------------%f",voiceX,voiceY);
             _cellHeight += voiceH + STTopicCellMargin;
+            //
         }
         
         // 底部工具条的高度

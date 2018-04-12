@@ -40,6 +40,11 @@
 /** 帖子的类型 */
 @property (nonatomic, assign) STTopicType type;
 
+/** 音频时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
+
 
 /****** 额外的辅助属性 ******/
 

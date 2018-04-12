@@ -95,11 +95,11 @@
         
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
-
-
+        
+        
     } else if (topic.type == STTopicTypeVoice) { // 声音帖子
-        //        self.voiceView.topic = topic;
-                self.voiceView.frame = topic.voiceF;
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceF;
     }
     
 }

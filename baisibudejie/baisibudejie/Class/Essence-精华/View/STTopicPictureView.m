@@ -62,11 +62,13 @@
     //设置图片
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
+//        self.progressView.roundedCorners = YES;
+//        self.progressView.trackTintColor = [UIColor clearColor];
+        
         self.progressView.hidden = NO;
         
         //计算进度值
         topic.pictureProgress = 1.0 * receivedSize / expectedSize;
-//        NSLog(@"%f",topic.pictureProgress);
         //显示进度值
         [self.progressView setProgress:topic.pictureProgress animated:NO];
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
