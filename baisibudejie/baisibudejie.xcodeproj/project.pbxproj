@@ -12,6 +12,10 @@
 		1E20EB4C1FD67A93005D0E9D /* STShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E20EB4A1FD67A93005D0E9D /* STShowPictureViewController.xib */; };
 		1E22A2D2207EF8F800D15839 /* STTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E22A2D1207EF8F800D15839 /* STTopicVideoView.m */; };
 		1E22A2D4207EFAA300D15839 /* STTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E22A2D3207EFAA300D15839 /* STTopicVideoView.xib */; };
+		1E22A2D7207F078200D15839 /* STUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E22A2D6207F078200D15839 /* STUser.m */; };
+		1E22A2DA207F079000D15839 /* STComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E22A2D9207F079000D15839 /* STComment.m */; };
+		1E22A2DE207F0D8B00D15839 /* STCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E22A2DC207F0D8B00D15839 /* STCommentViewController.m */; };
+		1E22A2DF207F0D8B00D15839 /* STCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E22A2DD207F0D8B00D15839 /* STCommentViewController.xib */; };
 		1E252DA61FD797FC00A1DC16 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E252DA51FD797E800A1DC16 /* Photos.framework */; };
 		1E2752BD207C651E00A89ADC /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2752A1207C651E00A89ADC /* NSData+ImageContentType.m */; };
 		1E2752BE207C651E00A89ADC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2752A3207C651E00A89ADC /* SDImageCache.m */; };
@@ -92,6 +96,13 @@
 		1E22A2D0207EF8F800D15839 /* STTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicVideoView.h; sourceTree = "<group>"; };
 		1E22A2D1207EF8F800D15839 /* STTopicVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicVideoView.m; sourceTree = "<group>"; };
 		1E22A2D3207EFAA300D15839 /* STTopicVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicVideoView.xib; sourceTree = "<group>"; };
+		1E22A2D5207F078200D15839 /* STUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STUser.h; sourceTree = "<group>"; };
+		1E22A2D6207F078200D15839 /* STUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STUser.m; sourceTree = "<group>"; };
+		1E22A2D8207F079000D15839 /* STComment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STComment.h; sourceTree = "<group>"; };
+		1E22A2D9207F079000D15839 /* STComment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STComment.m; sourceTree = "<group>"; };
+		1E22A2DB207F0D8B00D15839 /* STCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCommentViewController.h; sourceTree = "<group>"; };
+		1E22A2DC207F0D8B00D15839 /* STCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STCommentViewController.m; sourceTree = "<group>"; };
+		1E22A2DD207F0D8B00D15839 /* STCommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STCommentViewController.xib; sourceTree = "<group>"; };
 		1E252DA51FD797E800A1DC16 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		1E2752A0207C651E00A89ADC /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		1E2752A1207C651E00A89ADC /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
@@ -419,6 +430,9 @@
 				1E20EB481FD67A93005D0E9D /* STShowPictureViewController.h */,
 				1E20EB491FD67A93005D0E9D /* STShowPictureViewController.m */,
 				1E20EB4A1FD67A93005D0E9D /* STShowPictureViewController.xib */,
+				1E22A2DB207F0D8B00D15839 /* STCommentViewController.h */,
+				1E22A2DC207F0D8B00D15839 /* STCommentViewController.m */,
+				1E22A2DD207F0D8B00D15839 /* STCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -430,6 +444,10 @@
 				31DE2A881EA70ED2009441F1 /* STRecommendTag.m */,
 				31DE2AB21EACEFFD009441F1 /* STTopic.h */,
 				31DE2AB31EACEFFD009441F1 /* STTopic.m */,
+				1E22A2D5207F078200D15839 /* STUser.h */,
+				1E22A2D6207F078200D15839 /* STUser.m */,
+				1E22A2D8207F079000D15839 /* STComment.h */,
+				1E22A2D9207F079000D15839 /* STComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -676,6 +694,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E22A2DF207F0D8B00D15839 /* STCommentViewController.xib in Resources */,
 				31915C1F1EA5986E00AE3BD6 /* STRecommendUserCell.xib in Resources */,
 				31915C0A1EA4DB6A00AE3BD6 /* STRecommendViewController.xib in Resources */,
 				1E20EB4C1FD67A93005D0E9D /* STShowPictureViewController.xib in Resources */,
@@ -785,6 +804,7 @@
 				1E29D9621FCFD17B00C71D47 /* STTopicCell.m in Sources */,
 				31DE2AA01EA8B068009441F1 /* STPushGuideView.m in Sources */,
 				1E53E1FB1FCEA1B7006A2D85 /* STMeViewController.m in Sources */,
+				1E22A2D7207F078200D15839 /* STUser.m in Sources */,
 				1E2752D0207C6A7900A89ADC /* DACircularProgressView.m in Sources */,
 				31DE2AAE1EACD1D1009441F1 /* STPictureViewController.m in Sources */,
 				1E2752C8207C651E00A89ADC /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -796,10 +816,12 @@
 				1E2752C9207C651E00A89ADC /* UIImageView+WebCache.m in Sources */,
 				1E22A2D2207EF8F800D15839 /* STTopicVideoView.m in Sources */,
 				1E29D9691FD006C400C71D47 /* STTopicViewController.m in Sources */,
+				1E22A2DA207F079000D15839 /* STComment.m in Sources */,
 				1E2752CA207C651E00A89ADC /* UIView+WebCacheOperation.m in Sources */,
 				1E4BD5DA1FD545F000B3B402 /* STTopicPictureView.m in Sources */,
 				31915C0D1EA4DC2800AE3BD6 /* STRecommendCategory.m in Sources */,
 				1E20EB4B1FD67A93005D0E9D /* STShowPictureViewController.m in Sources */,
+				1E22A2DE207F0D8B00D15839 /* STCommentViewController.m in Sources */,
 				31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */,
 				31DE2AB71EAD873E009441F1 /* STConst.m in Sources */,
 				31AE8C9A1EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m in Sources */,

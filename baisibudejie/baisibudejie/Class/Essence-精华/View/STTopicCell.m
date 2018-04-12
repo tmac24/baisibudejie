@@ -12,6 +12,9 @@
 #import "STTopicVoiceView.h"
 #import "STTopicVideoView.h"
 
+#import "STUser.h"
+#import "STComment.h"
+
 @interface STTopicCell ()
 /** 头像 */
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -38,9 +41,20 @@
 /** 视频帖子中间的内容 */
 @property (nonatomic, weak) STTopicVideoView *videoView;
 
+/** 最热评论的内容 */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+/** 最热评论的整体 */
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+
 @end
 
 @implementation STTopicCell
+
++ (instancetype)cell
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 
 - (STTopicVideoView *)videoView {
     
@@ -131,6 +145,15 @@
         self.pictureView.hidden = YES;
     }
     
+    // 处理最热评论
+    STComment *cmt = [topic.top_cmt firstObject];
+    if (cmt) {
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+    } else {
+        self.topCmtView.hidden = YES;
+    }
+    
 }
 
 - (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder
@@ -148,7 +171,8 @@
 {
     frame.origin.x = STTopicCellMargin;
     frame.size.width -= 2 * STTopicCellMargin;
-    frame.size.height -= STTopicCellMargin;
+//    frame.size.height -= STTopicCellMargin;
+    frame.size.height = self.topic.cellHeight - STTopicCellMargin;
     frame.origin.y += STTopicCellMargin;
     
     [super setFrame:frame];

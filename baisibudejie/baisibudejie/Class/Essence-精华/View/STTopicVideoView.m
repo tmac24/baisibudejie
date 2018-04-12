@@ -9,6 +9,7 @@
 #import "STTopicVideoView.h"
 #import "STTopic.h"
 #import "STShowPictureViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface STTopicVideoView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -55,6 +56,16 @@
     NSInteger minute = topic.videotime / 60;
     NSInteger second = topic.videotime % 60;
     self.videotimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
+    
+    
+}
+- (IBAction)playVideoClick:(id)sender {
+    
+    MPMoviePlayerViewController *vc = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:self.topic.videouri]];
+    
+    UIViewController* viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    [viewController presentViewController:vc animated:YES completion:nil];
 }
 
 @end

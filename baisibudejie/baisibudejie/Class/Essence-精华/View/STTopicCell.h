@@ -12,4 +12,6 @@
 @interface STTopicCell : UITableViewCell
 /**< 模型数据 */
 @property (nonatomic, strong) STTopic *topic;
+
++ (instancetype)cell;
 @end

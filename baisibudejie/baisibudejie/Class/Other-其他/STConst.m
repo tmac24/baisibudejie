@@ -15,3 +15,10 @@ CGFloat const STTopicCellBottomBarH = 44;
 CGFloat const STTopicCellPictureMaxH = 1000;
 /** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
 CGFloat const STTopicCellPictureBreakH = 250;
+
+/** XMGUser模型-性别属性值 */
+NSString * const STUserSexMale = @"m";
+NSString * const STUserSexFemale = @"f";
+
+/** 精华-cell-最热评论标题的高度 */
+CGFloat const STTopicCellTopCmtTitleH = 20;

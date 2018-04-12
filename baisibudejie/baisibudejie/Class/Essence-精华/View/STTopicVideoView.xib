@@ -48,6 +48,9 @@
                     <state key="normal" backgroundImage="video-play">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="playVideoClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ex4-Bj-LHY"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

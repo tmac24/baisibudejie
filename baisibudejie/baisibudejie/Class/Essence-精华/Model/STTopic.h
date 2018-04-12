@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface STTopic : NSObject
+/** id */
+@property (nonatomic, copy) NSString *ID;
 /** 名称 */
 @property (nonatomic, copy) NSString *name;
 /** 头像 */
@@ -46,6 +48,13 @@
 @property (nonatomic, assign) NSInteger playcount;
 /** 视频时长 */
 @property (nonatomic, assign) NSInteger videotime;
+/** 视频的播放地址 */
+@property (copy, nonatomic) NSString *videouri;
+/** 音频的播放地址 */
+@property (copy, nonatomic) NSString *voiceuri;
+
+/** 最热评论(期望这个数组中存放的是XMGComment模型) */
+@property (nonatomic, strong) NSArray *top_cmt;
 
 
 /****** 额外的辅助属性 ******/

@@ -7,6 +7,8 @@
 //
 
 #import "STTopic.h"
+#import "STComment.h"
+#import "STUser.h"
 
 @implementation STTopic
 {
@@ -20,6 +22,11 @@
              @"large_image" : @"image1",
              @"middle_image" : @"image2"
              };
+}
+
++ (NSDictionary *)objectClassInArray
+{
+    return @{@"top_cmt" : @"STComment"};
 }
 - (NSString *)create_time
 {
@@ -96,6 +103,16 @@
             _videoF = CGRectMake(videoX, videoY, videoW, videoH);
             
             _cellHeight += videoH + STTopicCellMargin;
+        }
+        
+        // 如果有最热评论
+        STComment *cmt = [self.top_cmt firstObject];
+        if (cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            
+            STLog(@"%f", contentH);
+            _cellHeight += STTopicCellTopCmtTitleH + contentH + STTopicCellMargin;
         }
         
         // 底部工具条的高度

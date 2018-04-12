@@ -9,6 +9,10 @@
 #import "STTopicViewController.h"
 #import "STTopic.h"
 #import "STTopicCell.h"
+#import "STCommentViewController.h"
+
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVKit/AVPlayerViewController.h>
 
 
 @interface STTopicViewController ()
@@ -70,7 +74,6 @@ static NSString *const STTopicCellId = @"topic";
     [self.tableView.mj_header beginRefreshing];
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
-    
 }
 #pragma mark - 数据处理
 /**
@@ -97,7 +100,7 @@ static NSString *const STTopicCellId = @"topic";
         //        [responseObject writeToFile:@"/Users/readygo/Desktop/practice/topic.plist" atomically:YES];
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
-        
+        NSLog(@"%@",responseObject[@"list"]);
         // 字典 -> 模型
         self.topics = [STTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
@@ -197,6 +200,14 @@ static NSString *const STTopicCellId = @"topic";
     STTopic *top = self.topics[indexPath.row];
     
     return top.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    STCommentViewController *commentVc = [[STCommentViewController alloc] init];
+    commentVc.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:commentVc animated:YES];
+
 }
 
 @end
