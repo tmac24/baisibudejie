@@ -42,6 +42,7 @@
 
 - (void)setTopic:(STTopic *)topic
 {
+    
     _topic = topic;
     
     // 图片
