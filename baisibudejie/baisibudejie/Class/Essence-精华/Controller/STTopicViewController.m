@@ -97,10 +97,10 @@ static NSString *const STTopicCellId = @"topic";
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.params != params) return;
 //        STLog(@"%@",responseObject);
-        //        [responseObject writeToFile:@"/Users/readygo/Desktop/practice/topic.plist" atomically:YES];
+//                [responseObject writeToFile:@"/Users/readygo/Desktop/practice/topic.plist" atomically:YES];
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
-        NSLog(@"%@",responseObject[@"list"]);
+
         // 字典 -> 模型
         self.topics = [STTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
@@ -112,7 +112,7 @@ static NSString *const STTopicCellId = @"topic";
         
         // 清空页码
         self.page = 0;
-        [responseObject writeToFile:@"/Users/suntao/Desktop/duanzi.plist" atomically:YES];
+        [responseObject writeToFile:@"/User s/suntao/Desktop/duanzi.plist" atomically:YES];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != params) return;
         

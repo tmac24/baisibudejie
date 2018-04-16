@@ -18,8 +18,16 @@
 @implementation STLoginRegisterViewController
 - (IBAction)closeClick:(id)sender {
     
+//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
 - (IBAction)showLoginOrRegister:(UIButton *)sender {
     
     // 退出键盘

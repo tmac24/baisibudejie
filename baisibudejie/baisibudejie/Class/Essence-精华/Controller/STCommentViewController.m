@@ -10,6 +10,9 @@
 #import "STTopic.h"
 #import "STTopicCell.h"
 #import "STComment.h"
+#import "STCommentCell.h"
+
+static NSString * const STCommentId = @"comment";
 
 @interface STCommentViewController ()<UITableViewDelegate, UITableViewDataSource>
 /** 工具条底部间距 */
@@ -53,11 +56,6 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"%@",responseObject[@"hot"]);
-        
-        NSLog(@"-----------------------------");
-        
-        NSLog(@"%@",responseObject[@"data"]);
         // 最热评论
         self.hotComments = [STComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         
@@ -68,7 +66,6 @@
         [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_header endRefreshing];
-
     }];
     
     
@@ -100,7 +97,16 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
+    // cell的高度设置
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    // 背景色
     self.tableView.backgroundColor = STGlobalBg;
+    
+    // 注册
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([STCommentCell class]) bundle:nil] forCellReuseIdentifier:STCommentId];
+    
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)note
@@ -152,7 +158,7 @@
 {
     NSInteger hotCount = self.hotComments.count;
     NSInteger latestCount = self.latestComments.count;
-    
+
     if (hotCount) return 2; // 有"最热评论" + "最新评论" 2组
     if (latestCount) return 1; // 有"最新评论" 1 组
     return 0;
@@ -165,13 +171,14 @@
     if (section == 0) {
         return hotCount ? hotCount : latestCount;
     }
-    
+
     // 非第0组
     return latestCount;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+
     NSInteger hotCount = self.hotComments.count;
     if (section == 0) {
         return hotCount ? @"最热评论" : @"最新评论";
@@ -181,13 +188,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comment"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"comment"];
-    }
     
-    STComment *comment = [self commentInIndexPath:indexPath];
-    cell.textLabel.text = comment.content;
+    STCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:STCommentId];
+    
+    cell.comment = [self commentInIndexPath:indexPath];
     
     return cell;
 }

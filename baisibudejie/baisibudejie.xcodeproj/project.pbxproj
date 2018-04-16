@@ -41,6 +41,9 @@
 		1E2D4FA4207DBAEA00606949 /* STPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2D4FA3207DBAEA00606949 /* STPublishView.xib */; };
 		1E2D4FA7207DEF8400606949 /* STTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D4FA6207DEF8400606949 /* STTopicVoiceView.m */; };
 		1E2D4FA9207DEF9400606949 /* STTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2D4FA8207DEF9400606949 /* STTopicVoiceView.xib */; };
+		1E46136920846F75003AEA52 /* STTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E46136820846F75003AEA52 /* STTopWindow.m */; };
+		1E46136D2084AAEA003AEA52 /* STCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E46136B2084AAEA003AEA52 /* STCommentCell.m */; };
+		1E46136E2084AAEA003AEA52 /* STCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E46136C2084AAEA003AEA52 /* STCommentCell.xib */; };
 		1E4BD5DA1FD545F000B3B402 /* STTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4BD5D91FD545F000B3B402 /* STTopicPictureView.m */; };
 		1E4BD5DC1FD545FD00B3B402 /* STTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4BD5DB1FD545FD00B3B402 /* STTopicPictureView.xib */; };
 		1E53E1FB1FCEA1B7006A2D85 /* STMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E1F91FCEA1B7006A2D85 /* STMeViewController.m */; };
@@ -150,6 +153,11 @@
 		1E2D4FA5207DEF8400606949 /* STTopicVoiceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicVoiceView.h; sourceTree = "<group>"; };
 		1E2D4FA6207DEF8400606949 /* STTopicVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicVoiceView.m; sourceTree = "<group>"; };
 		1E2D4FA8207DEF9400606949 /* STTopicVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicVoiceView.xib; sourceTree = "<group>"; };
+		1E46136720846F75003AEA52 /* STTopWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopWindow.h; sourceTree = "<group>"; };
+		1E46136820846F75003AEA52 /* STTopWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopWindow.m; sourceTree = "<group>"; };
+		1E46136A2084AAEA003AEA52 /* STCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCommentCell.h; sourceTree = "<group>"; };
+		1E46136B2084AAEA003AEA52 /* STCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STCommentCell.m; sourceTree = "<group>"; };
+		1E46136C2084AAEA003AEA52 /* STCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STCommentCell.xib; sourceTree = "<group>"; };
 		1E4BD5D81FD545F000B3B402 /* STTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTopicPictureView.h; sourceTree = "<group>"; };
 		1E4BD5D91FD545F000B3B402 /* STTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTopicPictureView.m; sourceTree = "<group>"; };
 		1E4BD5DB1FD545FD00B3B402 /* STTopicPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STTopicPictureView.xib; sourceTree = "<group>"; };
@@ -472,6 +480,9 @@
 				1E22A2D0207EF8F800D15839 /* STTopicVideoView.h */,
 				1E22A2D1207EF8F800D15839 /* STTopicVideoView.m */,
 				1E22A2D3207EFAA300D15839 /* STTopicVideoView.xib */,
+				1E46136A2084AAEA003AEA52 /* STCommentCell.h */,
+				1E46136B2084AAEA003AEA52 /* STCommentCell.m */,
+				1E46136C2084AAEA003AEA52 /* STCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -615,6 +626,8 @@
 			children = (
 				31AE8CA41EA0F70A0061AB6D /* STTabBar.h */,
 				31AE8CA51EA0F70A0061AB6D /* STTabBar.m */,
+				1E46136720846F75003AEA52 /* STTopWindow.h */,
+				1E46136820846F75003AEA52 /* STTopWindow.m */,
 				31DE2A9E1EA8B068009441F1 /* STPushGuideView.h */,
 				31DE2A9F1EA8B068009441F1 /* STPushGuideView.m */,
 				31DE2AA11EA8B07A009441F1 /* STPushGuideView.xib */,
@@ -708,6 +721,7 @@
 				31DE2A951EA8486F009441F1 /* STLoginRegisterViewController.xib in Resources */,
 				31915C031EA45BCA00AE3BD6 /* STFriendTrendsViewController.xib in Resources */,
 				31AE8C641EA0DE0B0061AB6D /* Main.storyboard in Resources */,
+				1E46136E2084AAEA003AEA52 /* STCommentCell.xib in Resources */,
 				1E22A2D4207EFAA300D15839 /* STTopicVideoView.xib in Resources */,
 				1E2D4FA4207DBAEA00606949 /* STPublishView.xib in Resources */,
 				1E2D4FA9207DEF9400606949 /* STTopicVoiceView.xib in Resources */,
@@ -802,6 +816,7 @@
 				1E2752C6207C651E00A89ADC /* UIImage+GIF.m in Sources */,
 				1E2752BF207C651E00A89ADC /* SDWebImageCompat.m in Sources */,
 				1E29D9621FCFD17B00C71D47 /* STTopicCell.m in Sources */,
+				1E46136920846F75003AEA52 /* STTopWindow.m in Sources */,
 				31DE2AA01EA8B068009441F1 /* STPushGuideView.m in Sources */,
 				1E53E1FB1FCEA1B7006A2D85 /* STMeViewController.m in Sources */,
 				1E22A2D7207F078200D15839 /* STUser.m in Sources */,
@@ -824,6 +839,7 @@
 				1E22A2DE207F0D8B00D15839 /* STCommentViewController.m in Sources */,
 				31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */,
 				31DE2AB71EAD873E009441F1 /* STConst.m in Sources */,
+				1E46136D2084AAEA003AEA52 /* STCommentCell.m in Sources */,
 				31AE8C9A1EA0F4F40061AB6D /* UIBarButtonItem+STExtension.m in Sources */,
 				1E2752C4207C651E00A89ADC /* SDWebImagePrefetcher.m in Sources */,
 				31DE2A981EA85382009441F1 /* STVerticalButton.m in Sources */,

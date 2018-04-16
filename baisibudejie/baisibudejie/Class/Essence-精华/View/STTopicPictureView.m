@@ -87,6 +87,7 @@
     } else { // 非大图
         self.seeBigButton.hidden = YES;
         self.imageView.contentMode = UIViewContentModeScaleToFill;
+        //
     }
 }
 @end
