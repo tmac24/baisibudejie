@@ -168,8 +168,8 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    frame.origin.x = STTopicCellMargin;
-    frame.size.width -= 2 * STTopicCellMargin;
+//    frame.origin.x = STTopicCellMargin;
+//    frame.size.width -= 2 * STTopicCellMargin;
 //    frame.size.height -= STTopicCellMargin;
     frame.size.height = self.topic.cellHeight - STTopicCellMargin;
     frame.origin.y += STTopicCellMargin;

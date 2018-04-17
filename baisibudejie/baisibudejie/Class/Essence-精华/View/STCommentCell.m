@@ -22,6 +22,16 @@
 
 @implementation STCommentCell
 
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     

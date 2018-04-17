@@ -249,11 +249,6 @@ static NSString * const STCommentId = @"comment";
     return [self commentsInSection:indexPath.section][indexPath.row];
 }
 
-#pragma mark - <UITableViewDelegate>
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-    [self.view endEditing:YES];
-}
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -270,10 +265,13 @@ static NSString * const STCommentId = @"comment";
 {
     NSInteger hotCount = self.hotComments.count;
     NSInteger latestCount = self.latestComments.count;
+    // 隐藏尾部控件
+//    tableView.mj_footer.hidden = (latestCount == 0);
+    
     if (section == 0) {
         return hotCount ? hotCount : latestCount;
     }
-
+    
     // 非第0组
     return latestCount;
 }
@@ -303,6 +301,52 @@ static NSString * const STCommentId = @"comment";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    } else {
+        // 被点击的cell
+        STCommentCell *cell = (STCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+        // 出现一个第一响应者
+        [cell becomeFirstResponder];
+        
+        // 显示MenuController
+        UIMenuItem *ding = [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(ding:)];
+        UIMenuItem *replay = [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(replay:)];
+        UIMenuItem *report = [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(report:)];
+        menu.menuItems = @[ding, replay, report];
+        CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, cell.height * 0.5);
+        [menu setTargetRect:rect inView:cell];
+        [menu setMenuVisible:YES animated:YES];
+    }
+}
+#pragma mark - <UITableViewDelegate>
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.view endEditing:YES];
+    
+    [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+}
 
+#pragma mark - MenuItem处理
+- (void)ding:(UIMenuController *)menu
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
+}
+
+- (void)replay:(UIMenuController *)menu
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
+}
+
+- (void)report:(UIMenuController *)menu
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
+}
 
 @end

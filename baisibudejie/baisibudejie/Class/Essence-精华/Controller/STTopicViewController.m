@@ -112,7 +112,7 @@ static NSString *const STTopicCellId = @"topic";
         
         // 清空页码
         self.page = 0;
-        [responseObject writeToFile:@"/User s/suntao/Desktop/duanzi.plist" atomically:YES];
+//        [responseObject writeToFile:@"/Users/suntao/Desktop/duanzi.plist" atomically:YES];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != params) return;
         
