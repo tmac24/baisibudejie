@@ -9,5 +9,8 @@
 #import "STComment.h"
 
 @implementation STComment
-
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
+}
 @end

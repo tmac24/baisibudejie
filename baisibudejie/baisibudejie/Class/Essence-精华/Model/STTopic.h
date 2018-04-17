@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class STComment;
+
 @interface STTopic : NSObject
 /** id */
 @property (nonatomic, copy) NSString *ID;
@@ -33,6 +35,8 @@
 @property (nonatomic, assign) CGFloat width;
 /** 图片的高度 */
 @property (nonatomic, assign) CGFloat height;
+/** 最热评论 */
+@property (nonatomic, strong) STComment *top_cmt;
 /** 小图片的URL */
 @property (nonatomic, copy) NSString *small_image;
 /** 中图片的URL */
@@ -53,8 +57,7 @@
 /** 音频的播放地址 */
 @property (copy, nonatomic) NSString *voiceuri;
 
-/** 最热评论(期望这个数组中存放的是XMGComment模型) */
-@property (nonatomic, strong) NSArray *top_cmt;
+
 
 
 /****** 额外的辅助属性 ******/

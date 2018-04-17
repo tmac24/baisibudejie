@@ -11,6 +11,7 @@
 #import "STTopicCell.h"
 #import "STComment.h"
 #import "STCommentCell.h"
+#import "STCommentHeaderView.h"
 
 static NSString * const STCommentId = @"comment";
 
@@ -23,9 +24,26 @@ static NSString * const STCommentId = @"comment";
 @property (nonatomic, strong) NSArray *hotComments;
 /** 最新评论 */
 @property (nonatomic, strong) NSMutableArray *latestComments;
+
+/** 保存帖子的top_cmt */
+@property (nonatomic, strong) STComment *saved_top_cmt;
+
+/** 保存当前的页码 */
+@property (nonatomic, assign) NSInteger page;
+
+/** 管理者 */
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 @end
 
 @implementation STCommentViewController
+
+- (AFHTTPSessionManager *)manager
+{
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,10 +59,65 @@ static NSString * const STCommentId = @"comment";
 {
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
+    self.tableView.mj_footer.hidden = YES;
 }
+
+- (void)loadMoreComments
+{
+    // 结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    // 页码
+    NSInteger page = self.page + 1;
+    
+    // 参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"page"] = @(page);
+    STComment *cmt = [self.latestComments lastObject];
+    params[@"lastcid"] = cmt.ID;
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        // 最新评论
+        NSArray *newComments = [STComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        [self.latestComments addObjectsFromArray:newComments];
+        
+        // self.latestComments = @[1, 3, 0, 9]
+        // newComments = @[2, 8]
+        //        [self.latestComments addObject:newComments];
+        // self.latestComments = @[1, 3, 0, 9, @[2, 8]]
+        
+        // 页码
+        self.page = page;
+        
+        // 刷新数据
+        [self.tableView reloadData];
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) { // 全部加载完毕
+            self.tableView.mj_footer.hidden = YES;
+        } else {
+            // 结束刷新状态
+            [self.tableView.mj_footer endRefreshing];
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.tableView.mj_footer endRefreshing];
+    }];
+}
+
 
 - (void)loadNewComments
 {
+    // 结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"dataList";
@@ -52,23 +125,29 @@ static NSString * const STCommentId = @"comment";
     params[@"data_id"] = self.topic.ID;
     params[@"hot"] = @"1";
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
         // 最热评论
         self.hotComments = [STComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
-        
         // 最新评论
         self.latestComments = [STComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        // 页码
+        self.page = 1;
         
+        // 刷新数据
         [self.tableView reloadData];
+        // 结束刷新
         [self.tableView.mj_header endRefreshing];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) { // 全部加载完毕
+            self.tableView.mj_footer.hidden = YES;
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [self.tableView.mj_header endRefreshing];
     }];
-    
-    
 
 }
 
@@ -76,6 +155,13 @@ static NSString * const STCommentId = @"comment";
 {
     // 创建header
     UIView *header = [[UIView alloc] init];
+    
+    // 清空top_cmt
+    if (self.topic.top_cmt) {
+        self.saved_top_cmt = self.topic.top_cmt;
+        self.topic.top_cmt = nil;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
     
     // 添加cell
     STTopicCell *cell = [STTopicCell cell];
@@ -107,6 +193,12 @@ static NSString * const STCommentId = @"comment";
     // 注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([STCommentCell class]) bundle:nil] forCellReuseIdentifier:STCommentId];
     
+    // 去掉分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    // 内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, STTopicCellMargin, 0);
+    
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)note
@@ -117,7 +209,7 @@ static NSString * const STCommentId = @"comment";
     self.bottomSapce.constant = STScreenH - frame.origin.y;
     // 动画时间
     CGFloat duration = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    // 动画 及时刷新
+    // 动画
     [UIView animateWithDuration:duration animations:^{
         [self.view layoutIfNeeded];
     }];
@@ -126,6 +218,16 @@ static NSString * const STCommentId = @"comment";
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 恢复帖子的top_cmt
+    if (self.saved_top_cmt) {
+        self.topic.top_cmt = self.saved_top_cmt;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
+    
+    // 取消所有任务
+    //    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    [self.manager invalidateSessionCancelingTasks:YES];
 }
 
 
@@ -176,14 +278,19 @@ static NSString * const STCommentId = @"comment";
     return latestCount;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-
+    // 先从缓存池中找header
+    STCommentHeaderView *header = [STCommentHeaderView headerViewWithTableView:tableView];
+    
+    // 设置label的数据
     NSInteger hotCount = self.hotComments.count;
     if (section == 0) {
-        return hotCount ? @"最热评论" : @"最新评论";
+        header.title = hotCount ? @"最热评论" : @"最新评论";
+    } else {
+        header.title = @"最新评论";
     }
-    return @"最新评论";
+    return header;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -21,27 +21,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zi4-Hz-GZs" userLabel="头像">
-                        <rect key="frame" x="4" y="11" width="35" height="35"/>
+                        <rect key="frame" x="16" y="11" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="jLb-Sv-oY7"/>
                             <constraint firstAttribute="height" constant="35" id="kXI-px-XvY"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_manIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Yag-zz-cbh" userLabel="性别">
-                        <rect key="frame" x="39" y="11" width="30" height="20"/>
+                        <rect key="frame" x="51" y="11" width="30" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Q5d-fB-43I"/>
                             <constraint firstAttribute="width" constant="30" id="vq1-B6-Wey"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8W-e2-mOz" userLabel="用户名">
-                        <rect key="frame" x="69" y="11" width="36" height="20"/>
+                        <rect key="frame" x="81" y="11" width="36" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waM-Qn-2Ps" userLabel="评论内容">
-                        <rect key="frame" x="49" y="41" width="215" height="42"/>
+                        <rect key="frame" x="61" y="41" width="203" height="31"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="6Pr-80-peo"/>
                         </constraints>
@@ -70,7 +70,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HW3-4n-ugO" userLabel="音频按钮">
-                        <rect key="frame" x="49" y="41" width="62" height="22"/>
+                        <rect key="frame" x="61" y="41" width="62" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="9NC-Qn-ENe"/>
                             <constraint firstAttribute="width" constant="62" id="BlS-5c-4ha"/>
@@ -89,7 +89,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="zi4-Hz-GZs" firstAttribute="top" secondItem="Yag-zz-cbh" secondAttribute="top" id="1dn-uW-ALr"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="waM-Qn-2Ps" secondAttribute="bottom" constant="-1" id="6H9-VR-5JG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="waM-Qn-2Ps" secondAttribute="bottom" constant="10" id="6H9-VR-5JG"/>
                     <constraint firstItem="I8W-e2-mOz" firstAttribute="top" secondItem="Yag-zz-cbh" secondAttribute="top" id="GwZ-e7-xhe"/>
                     <constraint firstItem="fLj-wi-1QJ" firstAttribute="leading" secondItem="waM-Qn-2Ps" secondAttribute="trailing" id="Lhk-qN-9aR"/>
                     <constraint firstItem="waM-Qn-2Ps" firstAttribute="leading" secondItem="zi4-Hz-GZs" secondAttribute="trailing" constant="10" id="Ll9-FM-ALA"/>
@@ -99,7 +99,7 @@
                     <constraint firstItem="I8W-e2-mOz" firstAttribute="leading" secondItem="Yag-zz-cbh" secondAttribute="trailing" id="XpZ-1G-jT9"/>
                     <constraint firstItem="zjP-AW-OGS" firstAttribute="trailing" secondItem="fLj-wi-1QJ" secondAttribute="trailing" id="ajP-fT-VBT"/>
                     <constraint firstItem="HW3-4n-ugO" firstAttribute="leading" secondItem="waM-Qn-2Ps" secondAttribute="leading" id="dc2-KK-M4B"/>
-                    <constraint firstItem="zi4-Hz-GZs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-12" id="kIU-mY-S2p"/>
+                    <constraint firstItem="zi4-Hz-GZs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kIU-mY-S2p"/>
                     <constraint firstItem="Yag-zz-cbh" firstAttribute="leading" secondItem="zi4-Hz-GZs" secondAttribute="trailing" id="lQc-xQ-mcU"/>
                     <constraint firstItem="fLj-wi-1QJ" firstAttribute="top" secondItem="zjP-AW-OGS" secondAttribute="bottom" constant="10" id="uCB-3e-te2"/>
                     <constraint firstItem="I8W-e2-mOz" firstAttribute="bottom" secondItem="Yag-zz-cbh" secondAttribute="bottom" id="vLw-uy-wPo"/>

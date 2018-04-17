@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E15EEC92085864700A3FDA4 /* STCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E15EEC82085864700A3FDA4 /* STCommentHeaderView.m */; };
 		1E20EB471FD67012005D0E9D /* STProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E20EB461FD67012005D0E9D /* STProgressView.m */; };
 		1E20EB4B1FD67A93005D0E9D /* STShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E20EB491FD67A93005D0E9D /* STShowPictureViewController.m */; };
 		1E20EB4C1FD67A93005D0E9D /* STShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E20EB4A1FD67A93005D0E9D /* STShowPictureViewController.xib */; };
@@ -91,6 +92,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E15EEC72085864700A3FDA4 /* STCommentHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCommentHeaderView.h; sourceTree = "<group>"; };
+		1E15EEC82085864700A3FDA4 /* STCommentHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STCommentHeaderView.m; sourceTree = "<group>"; };
 		1E20EB451FD67012005D0E9D /* STProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STProgressView.h; sourceTree = "<group>"; };
 		1E20EB461FD67012005D0E9D /* STProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STProgressView.m; sourceTree = "<group>"; };
 		1E20EB481FD67A93005D0E9D /* STShowPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STShowPictureViewController.h; sourceTree = "<group>"; };
@@ -480,6 +483,8 @@
 				1E22A2D0207EF8F800D15839 /* STTopicVideoView.h */,
 				1E22A2D1207EF8F800D15839 /* STTopicVideoView.m */,
 				1E22A2D3207EFAA300D15839 /* STTopicVideoView.xib */,
+				1E15EEC72085864700A3FDA4 /* STCommentHeaderView.h */,
+				1E15EEC82085864700A3FDA4 /* STCommentHeaderView.m */,
 				1E46136A2084AAEA003AEA52 /* STCommentCell.h */,
 				1E46136B2084AAEA003AEA52 /* STCommentCell.m */,
 				1E46136C2084AAEA003AEA52 /* STCommentCell.xib */,
@@ -836,6 +841,7 @@
 				1E4BD5DA1FD545F000B3B402 /* STTopicPictureView.m in Sources */,
 				31915C0D1EA4DC2800AE3BD6 /* STRecommendCategory.m in Sources */,
 				1E20EB4B1FD67A93005D0E9D /* STShowPictureViewController.m in Sources */,
+				1E15EEC92085864700A3FDA4 /* STCommentHeaderView.m in Sources */,
 				1E22A2DE207F0D8B00D15839 /* STCommentViewController.m in Sources */,
 				31AE8CA61EA0F70A0061AB6D /* STTabBar.m in Sources */,
 				31DE2AB71EAD873E009441F1 /* STConst.m in Sources */,

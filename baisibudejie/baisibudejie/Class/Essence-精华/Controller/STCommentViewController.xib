@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STCommentViewController">
             <connections>
-                <outlet property="bottomSapce" destination="vB8-RM-Nt7" id="5K7-RW-X7n"/>
+                <outlet property="bottomSapce" destination="zLS-rd-yC8" id="EHt-HI-tDZ"/>
                 <outlet property="tableView" destination="X1P-Wa-axB" id="leR-EY-bBM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,9 +25,6 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="X1P-Wa-axB" userLabel="评论内容">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="623" id="2fL-Gj-lwm"/>
-                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="8Sk-dQ-Voy"/>
                         <outlet property="delegate" destination="-1" id="slg-YK-6iT"/>
@@ -92,6 +89,7 @@
                 <constraint firstItem="X1P-Wa-axB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RYR-Ha-aPS"/>
                 <constraint firstItem="X1P-Wa-axB" firstAttribute="leading" secondItem="3yq-nM-WU8" secondAttribute="leading" id="idV-Mt-pRu"/>
                 <constraint firstItem="X1P-Wa-axB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mw2-pD-UyF"/>
+                <constraint firstAttribute="bottom" secondItem="3yq-nM-WU8" secondAttribute="bottom" id="zLS-rd-yC8"/>
                 <constraint firstItem="3yq-nM-WU8" firstAttribute="top" secondItem="X1P-Wa-axB" secondAttribute="bottom" id="zxk-Fz-Qa9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
