@@ -660,7 +660,6 @@
 				31AE8C521EA0DE0B0061AB6D /* Sources */,
 				31AE8C531EA0DE0B0061AB6D /* Frameworks */,
 				31AE8C541EA0DE0B0061AB6D /* Resources */,
-				7EFD9F2D8EEF8B1DD6912D4E /* [CP] Embed Pods Frameworks */,
 				997414D1598464D475812367 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -736,21 +735,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7EFD9F2D8EEF8B1DD6912D4E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-baisibudejie/Pods-baisibudejie-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		997414D1598464D475812367 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -763,7 +747,8 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
